@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Journal Book</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+<!-- COVER -->
+<div class="cover" onclick="openBook()">
+ <center> <img src="Cover page.jpg">
+    <h1>✨ MY JOURNAL ✨</h1>
+    <p>Click to open your story</p></center>
+  </div>
+</div>
+
+<!-- BOOK -->
+<div class="book" id="book">
+
+  <!-- WEEKLY PLANNER -->
+  <div class="page active">
+    <h2>Weekly Planner 📅</h2>
+
+    <div class="week-grid">
+
+      <div class="day">
+        Monday
+        <textarea placeholder="What are your plans for Monday?"></textarea>
+      </div>
+
+      <div class="day">
+        Tuesday
+        <textarea placeholder="What are your plans for Tuesday?"></textarea>
+      </div>
+
+      <div class="day">
+        Wednesday
+        <textarea placeholder="What are your plans for Wednesday?"></textarea>
+      </div>
+
+      <div class="day">
+        Thursday
+        <textarea placeholder="What are your plans for Thursday?"></textarea>
+      </div>
+
+      <div class="day">
+        Friday
+        <textarea placeholder="What are your plans for Friday?"></textarea>
+      </div>
+
+      <div class="day">
+        Saturday
+        <textarea placeholder="Weekend plans..."></textarea>
+      </div>
+
+      <div class="day">
+        Sunday
+        <textarea placeholder="Rest & reflection..."></textarea>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TO DO -->
+  <div class="page">
+    <h2> Daily To-Do List 📝</h2>
+
+    <div class="todo">
+      <input placeholder="Write a task...">
+      <input placeholder="Write a task...">
+      <input placeholder="Write a task...">
+      <input placeholder="Write a task...">
+      <input placeholder="Write a task...">
+    </div>
+  </div>
+  
+  <div class="page">
+
+  <h2>🌷 Daily Reflection</h2>
+
+  <!-- DATE -->
+  <label>Date</label>
+  <input type="date" id="feeling_date">
+
+  <!-- HOW YOU FEEL -->
+  <h3>Today I feel...</h3>
+  <textarea class="big-input" id="feel_today" placeholder="Write how you feel..."></textarea>
+
+  <!-- WHY -->
+  <h3>Why I feel this way</h3>
+  <textarea class="big-input" id="why_feel" placeholder="Explain your feelings..."></textarea>
+
+  <!-- WHAT HAPPENED -->
+  <h3>What happened today?</h3>
+  <textarea class="big-input" id="what_happened" placeholder="Talk about your day..."></textarea>
+
+  <!-- EMOJIS -->
+  <h3>Choose your mood 💭</h3>
+
+  <div class="mood">
+    <span onclick="selectMood(this)">😊</span>
+    <span onclick="selectMood(this)">😐</span>
+    <span onclick="selectMood(this)">😔</span>
+    <span onclick="selectMood(this)">😡</span>
+    <span onclick="selectMood(this)">😍</span>
+  </div>
+
+</div>
+
+  <!-- NOTES -->
+  <div class="page">
+    <h2>Notes 📒</h2>
+
+   <textarea class="notes lined" placeholder="Write your thoughts..."></textarea>
+  </div>
+
+  <!-- REAL STORY -->
+  <div class="page">
+    <h2>💛 Real Story</h2>
+
+    <div class="story">
+      You are not behind in life.  
+      You are growing quietly, and becoming someone stronger every day.
+    </div>
+
+   <textarea class="big-input" placeholder="Your reflection..."></textarea>
+  </div>
+
+  <!-- AFFIRMATION -->
+  <div class="page">
+    <h2>☁️ Daily Affirmation</h2>
+
+    <div class="cloud">
+      I am the main character. I do not perform. I arrive.
+    </div>
+
+   <textarea class="big-input" placeholder="Your affirmation..."></textarea>
+  </div>
+
+  <!-- HABITS -->
+  <div class="page">
+    <h2>💫 Glow up Routine</h2>
+
+    <label><input type="checkbox"> Drink water</label>
+    <label><input type="checkbox"> Skincare</label>
+    <label><input type="checkbox"> Positive thoughts</label>
+    <label><input type="checkbox"> Move my body</label>
+  </div>
+
+  <!-- CLOSING -->
+  <div class="page">
+    <h2>✨ Closing</h2>
+
+    <div class="cloud">
+      You are enough. You always have been.
+    </div>
+  </div>
+
+</div>
+
+<!-- NAV -->
+<div class="nav">
+  <button onclick="prev()">⬅ Prev</button>
+  <button onclick="next()">Next ➡</button>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
+
+<script src="app.js"></script>
+</body>
+</html>
