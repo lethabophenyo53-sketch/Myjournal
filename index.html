@@ -4,48 +4,41 @@
 <meta charset="UTF-8">
 <title>Veloura Journal</title>
 <link rel="stylesheet" href="style.css">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
 <!-- COVER -->
 <div class="cover" onclick="openBook()">
-  <img src="Cover page.jpg">
+  <img src="cover.jpg">
 </div>
 
 <!-- BOOK -->
 <div class="book" id="book">
 
-  <!-- PERSONAL PAGE -->
+  <!-- PERSONAL MAP PAGE -->
   <div class="page active">
-    <h2>✨ Your Story Begins...</h2>
+    <h2 class="heading">✨ Your Journey Map</h2>
 
     <div class="profile-map">
-      <div class="bubble">
-        <label>Name</label>
-        <input id="name">
-      </div>
+      <div class="bubble">Name <input></div>
+      <div class="bubble">Age <input></div>
+      <div class="bubble">Dream <input></div>
+      <div class="bubble">Energy <input></div>
 
-      <div class="bubble">
-        <label>Age</label>
-        <input id="age">
-      </div>
-
-      <div class="bubble">
-        <label>Dream Life</label>
-        <input id="dream">
-      </div>
-
-      <div class="bubble">
-        <label>Energy</label>
-        <input id="energy">
-      </div>
+      <!-- LINES -->
+      <div class="line l1"></div>
+      <div class="line l2"></div>
+      <div class="line l3"></div>
     </div>
   </div>
 
-  <!-- WEEKLY PLANNER -->
+  <!-- WEEKLY -->
   <div class="page">
-    <h2>Weekly Planner</h2>
+    <h2 class="heading">Weekly Planner</h2>
 
     <div class="week-grid">
       <div class="day">Mon<textarea></textarea></div>
@@ -58,29 +51,26 @@
     </div>
 
     <h3>To-Do</h3>
-    <div class="todo">
-      <input placeholder="">
-      <input placeholder="">
-      <input placeholder="">
-    </div>
+    <input class="todo">
+    <input class="todo">
+    <input class="todo">
   </div>
 
   <!-- DAILY REFLECTION -->
   <div class="page">
-    <h2>🌷 Daily Reflection</h2>
+    <h2 class="heading">🌷 Daily Reflection</h2>
 
-    <input type="date" id="date">
+    <input type="date">
 
     <h3>Today I feel...</h3>
-    <textarea class="big-input" id="feel"></textarea>
-
-    <h3>Why I feel this way</h3>
     <textarea class="big-input"></textarea>
 
-    <h3>What happened today?</h3>
+    <h3>Why?</h3>
     <textarea class="big-input"></textarea>
 
-    <h3>Choose your mood</h3>
+    <h3>What happened?</h3>
+    <textarea class="big-input"></textarea>
+
     <div class="mood">
       <span onclick="selectMood(this)">😊</span>
       <span onclick="selectMood(this)">😐</span>
@@ -92,30 +82,31 @@
 
   <!-- NOTES -->
   <div class="page">
-    <h2>Notes</h2>
+    <h2 class="heading">Notes</h2>
     <textarea class="lined"></textarea>
   </div>
 
   <!-- REAL STORY -->
   <div class="page">
-    <h2>Real Story</h2>
+    <h2 class="heading">Real Story</h2>
     <div class="story">
-      You are not behind in life. You are growing quietly.
+      You are not behind. You are growing quietly.
     </div>
     <textarea class="big-input"></textarea>
   </div>
 
   <!-- AFFIRMATION -->
   <div class="page">
+    <h2 class="heading">Daily Affirmation</h2>
     <div class="cloud">
       I am the main character. I don’t perform, I arrive.
     </div>
     <textarea class="big-input"></textarea>
   </div>
 
-  <!-- GLOW ROUTINE -->
+  <!-- GLOW -->
   <div class="page">
-    <h2>Glow Routine</h2>
+    <h2 class="heading">Glow Routine ✨</h2>
     <label><input type="checkbox"> Drink Water</label>
     <label><input type="checkbox"> Skincare</label>
     <label><input type="checkbox"> Positive Mind</label>
@@ -124,9 +115,8 @@
 
   <!-- CLOSING -->
   <div class="page">
-    <h2>Closing</h2>
-
-    <p>"You did your best today. Let it go."</p>
+    <h2 class="heading">Closing</h2>
+    <p class="quote">You are enough 💖</p>
 
     <h3>Your Closure</h3>
     <textarea class="big-input"></textarea>
@@ -134,7 +124,6 @@
 
 </div>
 
-<!-- NAV -->
 <div class="nav">
   <button onclick="prev()">⬅</button>
   <button onclick="next()">➡</button>
