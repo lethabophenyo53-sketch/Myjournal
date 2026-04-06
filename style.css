@@ -1,11 +1,13 @@
+/* BODY */
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
-
   background: linear-gradient(135deg, #ffe6f2, #e6f0ff);
-
   perspective: 1200px;
 }
+
+/* SPARKLE BACKGROUND */
+body::before {
   content: "";
   position: fixed;
   width: 100%;
@@ -22,6 +24,7 @@ body {
   from { transform: translateY(0); }
   to { transform: translateY(-60px); }
 }
+
 /* COVER */
 .cover {
   height: 100vh;
@@ -50,10 +53,10 @@ body {
   padding: 30px;
   border-radius: 20px;
   margin-top: 20px;
-
   transform: rotateY(90deg);
   opacity: 0;
   transition: 0.5s;
+  position: relative;
 }
 
 .page.active {
@@ -86,11 +89,18 @@ body {
   height: 150px;
   border-radius: 10px;
   margin-top: 10px;
+  border: 1px solid #ddd;
+  padding: 10px;
 }
 
+/* LINED NOTES */
 .lined {
   width: 100%;
   height: 300px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 10px;
+
   background: repeating-linear-gradient(
     white,
     white 28px,
@@ -107,6 +117,11 @@ body {
 
 .mood span {
   cursor: pointer;
+  transition: 0.2s;
+}
+
+.mood span:hover {
+  transform: scale(1.2);
 }
 
 /* EMOJI RAIN */
@@ -135,6 +150,7 @@ body {
   background: white;
   padding: 10px;
   border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .bubble:nth-child(1) { top: 10px; left: 10px; }
@@ -152,4 +168,5 @@ button {
   background: pink;
   border: none;
   border-radius: 10px;
+  cursor: pointer;
 }
