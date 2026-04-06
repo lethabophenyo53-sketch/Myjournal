@@ -2,203 +2,143 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>My Journal Book</title>
+<title>Veloura Journal</title>
 <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
 <!-- COVER -->
 <div class="cover" onclick="openBook()">
- <center> <img src="Cover page.jpg">
-    <h1>✨ MY JOURNAL ✨</h1>
-    <p>Click to open your story</p></center>
-  </div>
+  <img src="cover.jpg">
 </div>
 
 <!-- BOOK -->
 <div class="book" id="book">
 
- <div class="page">
+  <!-- PERSONAL PAGE -->
+  <div class="page active">
+    <h2>✨ Your Story Begins...</h2>
 
-  <h2>✨ Your Story Begins...</h2>
+    <div class="profile-map">
+      <div class="bubble">
+        <label>Name</label>
+        <input id="name">
+      </div>
 
-  <div class="profile-map">
+      <div class="bubble">
+        <label>Age</label>
+        <input id="age">
+      </div>
 
-    <div class="bubble">
-      <label>Name</label>
-      <input id="name" placeholder="Your name...">
+      <div class="bubble">
+        <label>Dream Life</label>
+        <input id="dream">
+      </div>
+
+      <div class="bubble">
+        <label>Energy</label>
+        <input id="energy">
+      </div>
     </div>
-
-    <div class="bubble">
-      <label>Age</label>
-      <input id="age" placeholder="Your age...">
-    </div>
-
-    <div class="bubble">
-      <label>Dream Life</label>
-      <input id="dream" placeholder="Your dream life...">
-    </div>
-
-    <div class="bubble">
-      <label>Energy Today</label>
-      <input id="energy" placeholder="Soft / Happy / Tired...">
-    </div>
-
   </div>
-
-</div>
 
   <!-- WEEKLY PLANNER -->
-  <div class="page active">
-    <h2>Weekly Planner 📅</h2>
+  <div class="page">
+    <h2>Weekly Planner</h2>
 
     <div class="week-grid">
-
-      <div class="day">
-        Monday
-      </div>
-
-      <div class="day">
-        Tuesday
-      </div>
-
-      <div class="day">
-        Wednesday
-      </div>
-
-      <div class="day">
-        Thursday
-      
-      </div>
-
-      <div class="day">
-        Friday
-       
-      </div>
-
-      <div class="day">
-        Saturday
-       
-      </div>
-
-      <div class="day">
-        Sunday
-     
-      </div>
-
+      <div class="day">Mon<textarea></textarea></div>
+      <div class="day">Tue<textarea></textarea></div>
+      <div class="day">Wed<textarea></textarea></div>
+      <div class="day">Thu<textarea></textarea></div>
+      <div class="day">Fri<textarea></textarea></div>
+      <div class="day">Sat<textarea></textarea></div>
+      <div class="day">Sun<textarea></textarea></div>
     </div>
-  </div>
 
-  <!-- TO DO -->
-  <div class="page">
-    <h2> Daily To-Do List 📝</h2>
-
+    <h3>To-Do</h3>
     <div class="todo">
-      <input placeholder="Write a task...">
-      <input placeholder="Write a task...">
-      <input placeholder="Write a task...">
-      <input placeholder="Write a task...">
-      <input placeholder="Write a task...">
+      <input placeholder="">
+      <input placeholder="">
+      <input placeholder="">
     </div>
   </div>
-  
+
+  <!-- DAILY REFLECTION -->
   <div class="page">
+    <h2>🌷 Daily Reflection</h2>
 
-  <h2>🌷 Daily Reflection</h2>
+    <input type="date" id="date">
 
-  <!-- DATE -->
-  <label>Date</label>
-  <input type="date" id="feeling_date">
+    <h3>Today I feel...</h3>
+    <textarea class="big-input" id="feel"></textarea>
 
-  <!-- HOW YOU FEEL -->
-  <h3>Today I feel...</h3>
-  <textarea class="big-input" id="feel_today" placeholder="Write how you feel..."></textarea>
+    <h3>Why I feel this way</h3>
+    <textarea class="big-input"></textarea>
 
-  <!-- WHY -->
-  <h3>Why I feel this way</h3>
-  <textarea class="big-input" id="why_feel" placeholder="Explain your feelings..."></textarea>
+    <h3>What happened today?</h3>
+    <textarea class="big-input"></textarea>
 
-  <!-- WHAT HAPPENED -->
-  <h3>What happened today?</h3>
-  <textarea class="big-input" id="what_happened" placeholder="Talk about your day..."></textarea>
-
-  <!-- EMOJIS -->
-  <h3>Choose your mood 💭</h3>
-
-  <div class="mood">
-    <span onclick="selectMood(this)">😊</span>
-    <span onclick="selectMood(this)">😐</span>
-    <span onclick="selectMood(this)">😔</span>
-    <span onclick="selectMood(this)">😡</span>
-    <span onclick="selectMood(this)">😍</span>
+    <h3>Choose your mood</h3>
+    <div class="mood">
+      <span onclick="selectMood(this)">😊</span>
+      <span onclick="selectMood(this)">😐</span>
+      <span onclick="selectMood(this)">😔</span>
+      <span onclick="selectMood(this)">😡</span>
+      <span onclick="selectMood(this)">😍</span>
+    </div>
   </div>
-
-</div>
 
   <!-- NOTES -->
   <div class="page">
-    <h2>Notes 📒</h2>
-
-   <textarea class="notes lined" placeholder="Write your thoughts..."></textarea>
+    <h2>Notes</h2>
+    <textarea class="lined"></textarea>
   </div>
 
   <!-- REAL STORY -->
   <div class="page">
-    <h2>💛 Real Story</h2>
-
+    <h2>Real Story</h2>
     <div class="story">
-      You are not behind in life.  
-      You are growing quietly, and becoming someone stronger every day.
+      You are not behind in life. You are growing quietly.
     </div>
-
-   <textarea class="big-input" placeholder="Your reflection..."></textarea>
+    <textarea class="big-input"></textarea>
   </div>
 
   <!-- AFFIRMATION -->
   <div class="page">
-    <h2>☁️ Daily Affirmation</h2>
-
     <div class="cloud">
-      I am the main character. I do not perform. I arrive.
+      I am the main character. I don’t perform, I arrive.
     </div>
-
-   <textarea class="big-input" placeholder="Your affirmation..."></textarea>
+    <textarea class="big-input"></textarea>
   </div>
 
-  <!-- HABITS -->
+  <!-- GLOW ROUTINE -->
   <div class="page">
-    <h2>💫 Glow up Routine</h2>
-
-    <label><input type="checkbox"> Drink water</label>
+    <h2>Glow Routine</h2>
+    <label><input type="checkbox"> Drink Water</label>
     <label><input type="checkbox"> Skincare</label>
-    <label><input type="checkbox"> Positive thoughts</label>
-    <label><input type="checkbox"> Move my body</label>
+    <label><input type="checkbox"> Positive Mind</label>
+    <label><input type="checkbox"> Exercise</label>
   </div>
 
   <!-- CLOSING -->
   <div class="page">
-    <h2>✨ Closing</h2>
+    <h2>Closing</h2>
 
-    <div class="cloud">
-      You are enough. You always have been.
+    <p>"You did your best today. Let it go."</p>
 
-     <h3>🌙 Your Closure</h3>
-<textarea class="big-input" placeholder="What are you releasing today?"></textarea>
-    </div>
+    <h3>Your Closure</h3>
+    <textarea class="big-input"></textarea>
   </div>
 
 </div>
 
 <!-- NAV -->
 <div class="nav">
-  <button onclick="prev()">⬅ Prev</button>
-  <button onclick="next()">Next ➡</button>
+  <button onclick="prev()">⬅</button>
+  <button onclick="next()">➡</button>
 </div>
-
-<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
 
 <script src="app.js"></script>
 </body>
