@@ -143,3 +143,32 @@ button {
   border: none;
   border-radius: 10px;
 }
+
+/* EMOJI RAIN */
+.emoji-drop {
+  position: fixed;
+  top: -40px;
+  font-size: 28px;
+  pointer-events: none;
+  animation: fall 4s linear forwards;
+  z-index: 999;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg) scale(1.2);
+    opacity: 0;
+  }
+}
+.mood span {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.mood span:hover {
+  transform: scale(1.3);
+}
