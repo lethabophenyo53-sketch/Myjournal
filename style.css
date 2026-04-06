@@ -2,7 +2,10 @@
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
-  background: linear-gradient(135deg, #ffe6f2, #e6f0ff);
+
+  background: url("background.jpg") no-repeat center center fixed;
+  background-size: cover;
+
   perspective: 1200px;
 }
 
