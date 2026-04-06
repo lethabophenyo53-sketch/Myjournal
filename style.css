@@ -20,7 +20,7 @@ body {
 
 /* BOOK */
 .book {
-  display: none;
+  display: block;
   max-width: 900px;
   margin: auto;
   padding: 20px;
