@@ -58,14 +58,18 @@ body::before {
   display: none;
   position: relative;
 
-  background: #fdf6ec; /* beige paper */
+  background: #ffe6f2; /* SOFT PINK */
   padding: 30px;
   border-radius: 20px;
   margin-top: 20px;
 
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-  border: 1px solid #eee0d6;
 
+  transform: rotateY(90deg);
+  opacity: 0;
+  transform-origin: left;
+  transition: all 0.5s ease;
+}
   /* FLIP */
   transform: rotateY(90deg);
   opacity: 0;
