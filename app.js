@@ -58,6 +58,41 @@ function loadData(userId) {
   });
 }
 
+function selectMood(el) {
+  // remove previous selection
+  document.querySelectorAll(".mood span").forEach(e => {
+    e.classList.remove("active");
+  });
+
+  el.classList.add("active");
+
+  const emoji = el.textContent;
+
+  // SAVE
+  localStorage.setItem("mood", emoji);
+
+  // TRIGGER RAIN
+  emojiRain(emoji);
+}
+
+function emojiRain(emoji) {
+  for (let i = 0; i < 25; i++) {
+    let drop = document.createElement("div");
+    drop.className = "emoji-drop";
+    drop.innerText = emoji;
+
+    drop.style.left = Math.random() * 100 + "vw";
+    drop.style.animationDuration = (Math.random() * 2 + 3) + "s";
+
+    document.body.appendChild(drop);
+
+    // remove after animation
+    setTimeout(() => {
+      drop.remove();
+    }, 5000);
+  }
+}
+
 function payNow() {
   let handler = PaystackPop.setup({
     key: 'YOUR_PUBLIC_KEY',
