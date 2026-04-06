@@ -111,26 +111,70 @@ body::before {
 /* MAP */
 .profile-map {
   position: relative;
-  height: 300px;
+  width: 100%;
+  max-width: 700px;
+  height: 400px;
+  margin: auto;
 }
 
+/* BUBBLES (clean + consistent) */
 .bubble {
   position: absolute;
-  background: white;
-  padding: 10px;
-  border-radius: 15px;
+  background: #ffffff;
+  padding: 12px 15px;
+  border-radius: 20px;
+  width: 160px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  font-size: 14px;
 }
 
+/* INPUT INSIDE */
+.bubble input {
+  width: 90%;
+  margin-top: 5px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+  background: transparent;
+}
+
+/* ✨ PERFECT POSITIONS (SYMMETRICAL) */
+.bubble:nth-child(1) { top: 20px; left: 50%; transform: translateX(-50%); }
+.bubble:nth-child(2) { top: 150px; left: 50px; }
+.bubble:nth-child(3) { top: 150px; right: 50px; }
+.bubble:nth-child(4) { bottom: 20px; left: 50%; transform: translateX(-50%); }
+
+/* ✨ CONNECTING LINES */
 .line {
   position: absolute;
-  width: 100px;
+  background: #ffb6c1;
   height: 2px;
-  background: pink;
 }
 
-.l1 { top: 50px; left: 100px; }
-.l2 { top: 150px; right: 100px; }
-.l3 { bottom: 60px; left: 150px; }
+/* top → left */
+.l1 {
+  width: 120px;
+  top: 80px;
+  left: 180px;
+  transform: rotate(25deg);
+}
+
+/* top → right */
+.l2 {
+  width: 120px;
+  top: 80px;
+  right: 180px;
+  transform: rotate(-25deg);
+}
+
+/* bottom connection */
+.l3 {
+  width: 140px;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
 /* NAV */
 .nav {
