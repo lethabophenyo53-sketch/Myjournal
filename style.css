@@ -231,3 +231,18 @@ button {
   outline: none;
   margin-top: 5px;
 }
+
+.emoji-drop {
+  position: fixed;
+  top: -50px;
+  font-size: 24px;
+  pointer-events: none;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+}
