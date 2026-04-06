@@ -1,5 +1,9 @@
-let pages = document.querySelectorAll(".page");
+let pages;
 let current = 0;
+
+document.addEventListener("DOMContentLoaded", () => {
+  pages = document.querySelectorAll(".page");
+});
 
 function openBook() {
   document.querySelector(".cover").style.display = "none";
@@ -26,23 +30,22 @@ function prev() {
   }
 }
 
-/* EMOJI SELECT + RAIN */
+/* EMOJI RAIN */
 function selectMood(el) {
   let emoji = el.textContent;
-  emojiRain(emoji);
-}
 
-function emojiRain(emoji) {
   for (let i = 0; i < 25; i++) {
     let drop = document.createElement("div");
     drop.className = "emoji-drop";
     drop.innerText = emoji;
 
     drop.style.left = Math.random() * 100 + "vw";
-    drop.style.animationDuration = (Math.random() * 2 + 3) + "s";
+    drop.style.position = "fixed";
+    drop.style.top = "-20px";
+    drop.style.animation = "fall 4s linear";
 
     document.body.appendChild(drop);
 
-    setTimeout(() => drop.remove(), 5000);
+    setTimeout(() => drop.remove(), 4000);
   }
 }
