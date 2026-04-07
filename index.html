@@ -176,15 +176,21 @@
 </div>
 
   <div class="page">
-  <h1>Real Story 📖</h1>
+ <div class="page hidden" id="story">
 
-  <p class="subtitle">Your growth, your journey, your truth.</p>
+  <h1>📖 Real Story</h1>
 
-  <textarea class="big" placeholder="Where did your story begin?"></textarea>
-  <textarea class="big" placeholder="What changed you?"></textarea>
-  <textarea class="big" placeholder="What are you becoming?"></textarea>
+  <p class="story-text">
+    This is your space to write your real thoughts, your growth, your story 💖
+  </p>
+
+  <textarea id="realStory" class="pink-box" placeholder="Write your real story here..."></textarea>
+
+  <button class="btn" onclick="saveStory()">💾 Save Story</button>
+  <button class="btn" onclick="showPage('home')">⬅ Back</button>
+
 </div>
-
+    
   <div class="page">
   <h1>Glow Routine ✨</h1>
 
