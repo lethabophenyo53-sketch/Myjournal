@@ -306,34 +306,44 @@ textarea, input {
   font-size: 15px;
 }
 /* CENTER EVERYTHING */
+/* PERFECT CENTER */
 .glow-wrapper {
-  width: 70%;
-  margin: auto;
+  max-width: 420px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
-/* SMALL CUTE CARDS */
+/* CLEAN EVEN CARDS */
 .glow-card {
+  width: 100%;
   background: #fff0f6;
-  padding: 12px;
-  border-radius: 15px;
-  text-align: left;
+  padding: 14px 16px;
+  border-radius: 16px;
 
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  box-sizing: border-box;
 }
 
-/* KEEP TEXT + CHECKBOX TOGETHER */
+/* KEEP EVERYTHING ALIGNED */
 .glow-card label {
   display: flex;
   align-items: center;
-  gap: 10px;
-  cursor: pointer;
+  gap: 12px;
+
+  width: 100%;
   font-size: 15px;
 }
 
-/* NICE CHECKBOX SIZE */
+/* CHECKBOX */
 .glow-card input {
   transform: scale(1.2);
+  margin: 0;
+}
+
+/* HOVER */
+.glow-card:hover {
+  transform: translateY(-2px);
+  transition: 0.2s;
 }
