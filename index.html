@@ -10,218 +10,113 @@
 <!-- COVER -->
 <div class="cover" onclick="openBook()">
   <img src="Cover page.jpg">
-   <h2 class="heading">My Journey</h2>
+  <h1>My Journey ✨</h1>
 </div>
 
 <!-- BOOK -->
 <div class="book" id="book">
 
-<!-- PERSONAL MAP -->
-<div class="page">
-  <h1 class="heading">Your Journey Map ✨</h1>
+<!-- PERSONAL -->
+<div class="page active">
+  <h1>Your Journey ✨</h1>
 
-  <div class="profile-map">
+  <div class="map">
+    <div class="bubble top">Name <input id="name"></div>
+    <div class="bubble left">Age <input id="age"></div>
+    <div class="bubble right">Dreams <input id="dreams"></div>
+    <div class="bubble bottom">Energy <input id="energy"></div>
 
-    <div class="bubble">
-      Name
-      <input id="name">
-    </div>
-
-    <div class="bubble">
-      Age
-      <input id="age">
-    </div>
-
-    <div class="bubble">
-      Dreams
-      <input id="dreams">
-    </div>
-
-    <div class="bubble">
-      Energy
-      <input id="energy">
-      
-<div class="line l1"></div>
-<div class="line l2"></div>
-<div class="line l3"></div>
-    </div>
-
+    <div class="line l1"></div>
+    <div class="line l2"></div>
+    <div class="line l3"></div>
   </div>
-
 </div>
 
 <!-- WEEKLY -->
 <div class="page">
+  <h1>Weekly Planner</h1>
 
-  <h1 class="heading">Weekly Planner</h1>
+  <div class="week">
 
-  <div class="week-container">
-
-    <!-- LEFT SIDE -->
     <div class="left">
-
-      <div class="week-box">
-        <label>Week of:</label>
-        <input id="week">
-      </div>
-
-      <!-- ✅ NOTES BACK -->
-      <div class="notes-box">
-        <h3>Notes</h3>
-        <textarea id="weekly_notes" class="big-notes"></textarea>
-      </div>
-
+      <input id="week" placeholder="Week of...">
+      <textarea id="weekly_notes" class="notes"></textarea>
     </div>
 
-    <!-- RIGHT SIDE -->
     <div class="right">
-
-      <div class="day-card">
-        <b>Monday</b>
-        <textarea id="mon" class="big-area"></textarea>
-      </div>
-
-      <div class="day-card">
-        <b>Tuesday</b>
-        <textarea id="tue" class="big-area"></textarea>
-      </div>
-
-      <div class="day-card">
-        <b>Wednesday</b>
-        <textarea id="wed" class="big-area"></textarea>
-      </div>
-
-      <div class="day-card">
-        <b>Thursday</b>
-        <textarea id="thu" class="big-area"></textarea>
-      </div>
-
-      <div class="day-card">
-        <b>Friday</b>
-        <textarea id="fri" class="big-area"></textarea>
-      </div>
-
-      <div class="day-card">
-        <b>Saturday</b>
-        <textarea id="sat" class="big-area"></textarea>
-      </div>
-
-      <div class="day-card">
-        <b>Sunday</b>
-        <textarea id="sun" class="big-area"></textarea>
-      </div>
-
+      <div class="card"><b>Mon</b><textarea id="mon"></textarea></div>
+      <div class="card"><b>Tue</b><textarea id="tue"></textarea></div>
+      <div class="card"><b>Wed</b><textarea id="wed"></textarea></div>
+      <div class="card"><b>Thu</b><textarea id="thu"></textarea></div>
+      <div class="card"><b>Fri</b><textarea id="fri"></textarea></div>
+      <div class="card"><b>Sat</b><textarea id="sat"></textarea></div>
+      <div class="card"><b>Sun</b><textarea id="sun"></textarea></div>
     </div>
 
   </div>
-
 </div>
+
 <!-- TODO -->
 <div class="page">
-  <h2 class="heading">💖 To Do List</h2>
-
-  <input class="todo" id="todo1" placeholder="Task...">
-  <input class="todo" id="todo2">
-  <input class="todo" id="todo3">
-  <input class="todo" id="todo4">
+  <h1>To Do 💖</h1>
+  <input class="todo" id="t1">
+  <input class="todo" id="t2">
+  <input class="todo" id="t3">
+  <input class="todo" id="t4">
 </div>
 
-<!-- DAILY REFLECTION -->
+<!-- REFLECTION -->
 <div class="page">
+  <h1>Daily Reflection</h1>
 
-  <h1 class="heading">Daily Reflection</h1>
+  <input type="date" id="date">
 
-  <!-- DATE -->
-  <div class="date-box">
-    <label>Date</label>
-    <input type="date" id="date">
-  </div>
+  <textarea id="feel" class="big" placeholder="How do you feel?"></textarea>
+  <textarea id="why" class="big" placeholder="Why?"></textarea>
+  <textarea id="day" class="big" placeholder="What happened?"></textarea>
 
-  <!-- BIG SECTIONS -->
-  <div class="reflection-grid">
-
-    <div class="reflection-box">
-      <h3>How do you feel?</h3>
-      <textarea id="feel"></textarea>
-    </div>
-
-    <div class="reflection-box">
-      <h3>Why do you feel this way?</h3>
-      <textarea id="why"></textarea>
-    </div>
-
-    <div class="reflection-box full">
-      <h3>What happened today?</h3>
-      <textarea id="day"></textarea>
-    </div>
-
-  </div>
-
-  <!-- EMOJIS -->
   <div class="mood">
-    <span onclick="rain('😊')">😊</span>
-    <span onclick="rain('😐')">😐</span>
-    <span onclick="rain('😢')">😢</span>
-    <span onclick="rain('😍')">😍</span>
-  </div>
-
-</div>
-  
-  <div class="page">
-  <h1 class="heading">Notes</h1>
-
-  <div class="section">
-    <textarea class="lined"></textarea>
+    😊 😐 😢 😍
   </div>
 </div>
-  
-<!-- AFFIRMATION -->
+
+<!-- NOTES -->
 <div class="page">
-  <h1 class="heading">Daily Affirmation</h1>
-
-  <div class="cloud">
-    I am the main character. I do not perform. I arrive.
-  </div>
-
-  <div class="section">
-    <textarea class="big-input"></textarea>
-  </div>
+  <h1>Notes</h1>
+  <textarea class="big"></textarea>
 </div>
-  
+
+<!-- AFFIRM -->
+<div class="page">
+  <h1>Affirmation</h1>
+  <div class="cloud">I am the main character.</div>
+  <textarea class="big"></textarea>
+</div>
+
 <!-- STORY -->
 <div class="page">
-  <h1 class="heading">Real Story</h1>
-
-  <div class="section story">
-    You are not behind in life. You are growing quietly,
-    and one day everything will make sense.
-  </div>
-
-  <div class="section">
-    <textarea class="big-input"></textarea>
-  </div>
+  <h1>Real Story</h1>
+  <p>You are growing. Trust the process.</p>
+  <textarea class="big"></textarea>
 </div>
 
 <!-- GLOW -->
 <div class="page">
-  <h2 class="heading">Glow Routine ✨</h2>
-
-  <label><input type="checkbox" id="water"> Drink Water</label>
-  <label><input type="checkbox" id="skin"> Skincare</label>
-  <label><input type="checkbox" id="mind"> Positive Mind</label>
-  <label><input type="checkbox" id="exercise"> Exercise</label>
+  <h1>Glow ✨</h1>
+  <label><input type="checkbox"> Water</label>
+  <label><input type="checkbox"> Skincare</label>
+  <label><input type="checkbox"> Mind</label>
+  <label><input type="checkbox"> Exercise</label>
 </div>
 
-<!-- CLOSING -->
+<!-- CLOSE -->
 <div class="page">
-  <h1 class="heading">Closing</h1>
-
-  <div class="section">
-    <p>You are enough 💖</p>
-    <textarea class="big-input"></textarea>
-  </div>
-  
+  <h1>Closing</h1>
+  <textarea class="big"></textarea>
 </div>
+
+</div>
+
 <!-- NAV -->
 <div class="nav">
   <button onclick="prev()">⬅</button>
