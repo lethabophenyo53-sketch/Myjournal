@@ -1,169 +1,99 @@
 let currentPage = 0;
-
 const pages = document.querySelectorAll(".page");
-const book = document.getElementById("book");
-const cover = document.querySelector(".cover");
 
-function openBook() {
-  cover.style.display = "none";
-  book.style.display = "block";
-  showPage(0);
+/* NAV */
+function showPage(i){
+  pages.forEach(p=>p.classList.remove("active"));
+  pages[i].classList.add("active");
 }
 
-function showPage(index) {
-  pages.forEach(p => p.classList.remove("active"));
-  pages[index].classList.add("active");
-}
-
-function next() {
-  if (currentPage < pages.length - 1) {
+function next(){
+  if(currentPage < pages.length-1){
     currentPage++;
     showPage(currentPage);
   }
 }
 
-function prev() {
-  if (currentPage > 0) {
+function prev(){
+  if(currentPage > 0){
     currentPage--;
     showPage(currentPage);
   }
 }
 
-function selectMood(el) {
-  document.querySelectorAll(".mood span").forEach(s => s.style.transform = "scale(1)");
-  el.style.transform = "scale(1.4)";
+/* SCREENS */
+function openJournal(){
+  document.getElementById("homePage").classList.add("hidden");
+  document.getElementById("journalPage").classList.remove("hidden");
 }
 
-function moodRain(emoji) {
-  for (let i = 0; i < 25; i++) {
-    const el = document.createElement("div");
-    el.classList.add("fall");
-    el.innerText = emoji;
-
-    el.style.left = Math.random() * window.innerWidth + "px";
-    el.style.fontSize = (15 + Math.random() * 20) + "px";
-    el.style.animationDuration = (2 + Math.random() * 2) + "s";
-
-    document.body.appendChild(el);
-
-    setTimeout(() => {
-      el.remove();
-    }, 3000);
-  }
+function openSettings(){
+  document.getElementById("homePage").classList.add("hidden");
+  document.getElementById("settingsPage").classList.remove("hidden");
 }
 
-// ===================== SAVE ENTRY =====================
-function saveEntry() {
-  const date = document.getElementById("date").value;
-  const feel = document.getElementById("feel").value;
-  const why = document.getElementById("why").value;
-  const day = document.getElementById("whatHappened").value;
-
-  if (!date) {
-    alert("Please select a date first 💖");
-    return;
-  }
-
-  const entry = { date, feel, why, day };
-
-  let entries = JSON.parse(localStorage.getItem("entries")) || [];
-  entries.push(entry);
-
-  localStorage.setItem("entries", JSON.stringify(entries));
-
-  alert("Saved successfully ✨");
+function goHome(){
+  document.querySelectorAll(".screen").forEach(s=>s.classList.add("hidden"));
+  document.getElementById("homePage").classList.remove("hidden");
   loadEntries();
 }
 
-function loadEntries() {
-  const list = document.getElementById("entryList");
-  if (!list) return;
+/* SAVE */
+function saveEntry(){
+  let entry = {
+    date: document.getElementById("date").value,
+    feel: document.getElementById("feel").value
+  };
 
-  let entries = JSON.parse(localStorage.getItem("entries")) || [];
+  let data = JSON.parse(localStorage.getItem("entries")) || [];
+  data.push(entry);
 
-  list.innerHTML = "";
+  localStorage.setItem("entries", JSON.stringify(data));
 
-  entries.forEach((e, index) => {
-    const div = document.createElement("div");
-    div.classList.add("entry-card");
+  alert("Saved 💖");
+}
 
-    div.innerHTML = `
-      <h3>${e.date}</h3>
-      <p>${e.feel}</p>
-    `;
+/* LOAD */
+function loadEntries(){
+  const box = document.getElementById("entries");
+  box.innerHTML = "";
 
-    div.onclick = () => openEntry(index);
+  let data = JSON.parse(localStorage.getItem("entries")) || [];
 
-    list.appendChild(div);
+  data.forEach(e=>{
+    let div = document.createElement("div");
+    div.className="todo-box";
+    div.innerHTML = `<b>${e.date}</b><br>${e.feel}`;
+    box.appendChild(div);
   });
 }
-function openEntry(index) {
-  let entries = JSON.parse(localStorage.getItem("entries"));
 
-  const e = entries[index];
-
-  alert(
-    "📅 " + e.date +
-    "\n\n💖 Feeling: " + e.feel +
-    "\n\n🌷 Why: " + e.why +
-    "\n\n📖 Day: " + e.day
-  );
-}
-function showNewEntry() {
-  document.getElementById("homePage").style.display = "none";
-  document.getElementById("journalPage").style.display = "block";
+/* MOOD RAIN */
+function moodRain(emoji){
+  for(let i=0;i<20;i++){
+    let el=document.createElement("div");
+    el.className="fall";
+    el.innerText=emoji;
+    el.style.left=Math.random()*window.innerWidth+"px";
+    document.body.appendChild(el);
+    setTimeout(()=>el.remove(),3000);
+  }
 }
 
-let audio = new Audio();
+/* SETTINGS */
+function changeFont(font){
+  document.body.style.fontFamily=font;
+}
 
-function changeMusic(song) {
+let audio=new Audio();
+function changeMusic(song){
   audio.pause();
-
-  if (song) {
-    audio = new Audio(song);
-    audio.loop = true;
+  if(song){
+    audio=new Audio(song);
+    audio.loop=true;
     audio.play();
   }
 }
 
-function changeFont(font) {
-  document.body.style.fontFamily = font;
-  localStorage.setItem("font", font);
-}
-
-window.onload = () => {
-  const savedFont = localStorage.getItem("font");
-  if (savedFont) {
-    document.body.style.fontFamily = savedFont;
-  }
-
-  loadEntries();
-};
-
-setInterval(() => {
-  const s = document.createElement("div");
-  s.classList.add("sparkle");
-
-  s.style.left = Math.random() * window.innerWidth + "px";
-  s.style.top = window.innerHeight + "px";
-
-  document.body.appendChild(s);
-
-  setTimeout(() => {
-    s.remove();
-  }, 3000);
-}, 300);
-
-function saveStory() {
-  const story = document.getElementById("realStory").value;
-
-  localStorage.setItem("realStory", story);
-
-  alert("Real story saved 💖");
-}
-
-const savedStory = localStorage.getItem("realStory");
-if (savedStory) {
-  const box = document.getElementById("realStory");
-  if (box) box.value = savedStory;
-}
+/* LOAD ON START */
+window.onload=loadEntries;
