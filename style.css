@@ -178,8 +178,51 @@ textarea {
 }
 
 /* TODO */
-.todo {
-  margin: 8px 0;
+.title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-family: "Playfair Display", serif;
+}
+
+/* CONTAINER */
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* EACH TASK */
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff0f6;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* TEXT INPUT */
+.todo-item input[type="text"] {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+}
+
+/* CHECKBOX */
+.todo-item input[type="checkbox"] {
+  transform: scale(1.2);
+}
+
+/* DELETE BUTTON */
+.todo-item button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
 }
 
 /* NAV */
