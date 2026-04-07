@@ -70,41 +70,11 @@ textarea, input {
 .pink-box { height:200px; background:#ffd6e7; }
 
 /* week */
-.week {
-  display: flex;
-  gap: 20px;
-}
+.week { display:flex; gap:10px; }
+.week-left { width:40%; }
+.week-right { width:60%; }
+.day { margin:5px 0; }
 
-/* LEFT */
-.week-left {
-  width: 35%;
-}
-
-.notes-box {
-  height: 250px;
-  background: #fff0f6;
-  border-radius: 15px;
-  padding: 10px;
-}
-
-/* RIGHT */
-.week-right {
-  width: 65%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.day {
-  background: white;
-  padding: 10px;
-  border-radius: 12px;
-}
-
-.day textarea {
-  width: 100%;
-  height: 50px;
-}
 /* todo */
 .todo-box {
   background:#fff0f6;
@@ -219,15 +189,6 @@ textarea, input {
   50% { transform: translateY(-10px); opacity: 1; }
 }
 
-/* FIXED POSITIONS */
-.top { top: 0; left: 50%; transform: translateX(-50%); }
-.left { top: 50%; left: 0; transform: translateY(-50%); }
-.right { top: 50%; right: 0; transform: translateY(-50%); }
-.bottom { bottom: 0; left: 50%; transform: translateX(-50%); }
-
-.line.v { position:absolute; width:2px; height:100%; background:#ccc; left:50%; }
-.line.h { position:absolute; height:2px; width:100%; background:#ccc; top:50%; }
-
 /* nav */
 .nav { text-align:center; margin-top:15px; }
 .nav button {
@@ -245,8 +206,8 @@ textarea, input {
 }
 @keyframes drop {
   to { transform:translateY(100vh); opacity:0; }
-}
-.mood {
+
+  .mood {
   text-align: center;
   font-size: 26px;
 }
@@ -260,83 +221,4 @@ textarea, input {
   border-radius: 12px;
   margin: 6px 0;
 }
-
-/* SUBTITLE */
-.subtitle {
-  text-align: center;
-  opacity: 0.7;
-  margin-bottom: 15px;
-}
-
-/* EACH ITEM */
-.glow-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-
-  background: #fff0f6; /* soft pink */
-  padding: 12px 15px;
-  border-radius: 15px;
-
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  cursor: pointer;
-
-  transition: transform 0.2s;
-}
-
-.glow-item:hover {
-  transform: scale(1.02);
-}
-
-/* CHECKBOX */
-.glow-item input {
-  transform: scale(1.3);
-  cursor: pointer;
-}
-
-/* TEXT */
-.glow-item span {
-  font-size: 15px;
-}
-/* CENTER EVERYTHING */
-/* PERFECT CENTER */
-.glow-wrapper {
-  max-width: 420px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-/* CLEAN EVEN CARDS */
-.glow-card {
-  width: 100%;
-  background: #fff0f6;
-  padding: 14px 16px;
-  border-radius: 16px;
-
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  box-sizing: border-box;
-}
-
-/* KEEP EVERYTHING ALIGNED */
-.glow-card label {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-
-  width: 100%;
-  font-size: 15px;
-}
-
-/* CHECKBOX */
-.glow-card input {
-  transform: scale(1.2);
-  margin: 0;
-}
-
-/* HOVER */
-.glow-card:hover {
-  transform: translateY(-2px);
-  transition: 0.2s;
 }
