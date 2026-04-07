@@ -28,15 +28,34 @@ body {
 .page {
   display: none;
   background: #ffe6f2;
-  padding: 30px;
-  border-radius: 20px;
-  margin-top: 20px;
+  padding: 40px;
+  border-radius: 25px;
+  margin: 30px auto;
+  max-width: 900px;
+
+  textarea, input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+  /* THIS FIXES EVERYTHING */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  transform: rotateY(90deg);
+  opacity: 0;
+  transition: 0.5s;
 }
 
 .page.active {
-  display: block;
+  display: flex;
+  transform: rotateY(0);
+  opacity: 1;
 }
-
 /* HEADING */
 .heading {
   text-align: center;
@@ -147,4 +166,9 @@ button {
     transform: translateY(110vh);
     opacity: 0;
   }
+  .section {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+}
 }
