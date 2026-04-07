@@ -7,25 +7,23 @@ function enterApp(){
 }
 
 /* NAVIGATION */
-function showPage(i){
-  pages.forEach(p=>p.classList.remove("active"));
-  pages[i].classList.add("active");
+
+function showPage(i) {
+  pages.forEach(p => p.classList.remove("active"));
+  if (pages[i]) pages[i].classList.add("active");
 }
 
-function next(){
-  if(currentPage < pages.length-1){
-    currentPage++;
-    showPage(currentPage);
-  }
+function next() {
+  page++;
+  if (page >= pages.length) page = pages.length - 1;
+  showPage(page);
 }
 
-function prev(){
-  if(currentPage > 0){
-    currentPage--;
-    showPage(currentPage);
-  }
+function prev() {
+  page--;
+  if (page < 0) page = 0;
+  showPage(page);
 }
-
 /* SCREENS */
 function openJournal(){
   document.getElementById("homePage").classList.add("hidden");
