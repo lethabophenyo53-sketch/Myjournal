@@ -135,7 +135,17 @@ textarea,input{
 }
 
 /* todo */
-.todo{display:block;margin:5px 0;}
+.todo-page {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.todo-input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
 
 /* mood */
 .mood{font-size:24px;margin-top:10px;}
