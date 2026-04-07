@@ -17,19 +17,33 @@
 <div class="book" id="book">
 
 <!-- PERSONAL MAP -->
-<div class="page active">
-  <h2 class="heading">✨ Your Journey Map</h2>
+<div class="page">
+  <h1 class="heading">Your Journey Map ✨</h1>
 
   <div class="profile-map">
-    <div class="bubble">Name<input id="name"></div>
-    <div class="bubble">Age<input id="age"></div>
-    <div class="bubble">Dream<input id="dream"></div>
-    <div class="bubble">Goal<input id="goal"></div>
 
-    <div class="line l1"></div>
-    <div class="line l2"></div>
-    <div class="line l3"></div>
+    <div class="bubble">
+      Name
+      <input id="name">
+    </div>
+
+    <div class="bubble">
+      Age
+      <input id="age">
+    </div>
+
+    <div class="bubble">
+      Dreams
+      <input id="dreams">
+    </div>
+
+    <div class="bubble">
+      Energy
+      <input id="energy">
+    </div>
+
   </div>
+
 </div>
 
 <!-- WEEKLY -->
@@ -110,40 +124,78 @@
 
 <!-- DAILY REFLECTION -->
 <div class="page">
-  <h2 class="heading">Daily Reflection</h2>
 
-  <input id="date" type="date">
+  <h1 class="heading">Daily Reflection</h1>
 
-  <textarea id="feel" placeholder="How do you feel?"></textarea>
-  <textarea id="why" placeholder="Why do you feel this way?"></textarea>
-  <textarea id="day" placeholder="What happened today?"></textarea>
+  <!-- DATE -->
+  <div class="date-box">
+    <label>Date</label>
+    <input type="date" id="date">
+  </div>
 
+  <!-- BIG SECTIONS -->
+  <div class="reflection-grid">
+
+    <div class="reflection-box">
+      <h3>How do you feel?</h3>
+      <textarea id="feel"></textarea>
+    </div>
+
+    <div class="reflection-box">
+      <h3>Why do you feel this way?</h3>
+      <textarea id="why"></textarea>
+    </div>
+
+    <div class="reflection-box full">
+      <h3>What happened today?</h3>
+      <textarea id="day"></textarea>
+    </div>
+
+  </div>
+
+  <!-- EMOJIS -->
   <div class="mood">
     <span onclick="rain('😊')">😊</span>
     <span onclick="rain('😐')">😐</span>
     <span onclick="rain('😢')">😢</span>
     <span onclick="rain('😍')">😍</span>
   </div>
-</div>
 
+</div>
+  
+  <div class="page">
+  <h1 class="heading">Notes</h1>
+
+  <div class="section">
+    <textarea class="lined"></textarea>
+  </div>
+</div>
+  
 <!-- AFFIRMATION -->
 <div class="page">
-  <h2 class="heading">Daily Affirmation</h2>
+  <h1 class="heading">Daily Affirmation</h1>
 
-  <div class="cloud">I am the main character. I do not perform, I arrive.</div>
-
-  <textarea id="affirm"></textarea>
-</div>
-
-<!-- STORY -->
-<div class="page">
-  <h2 class="heading">Real Story</h2>
-
-  <div class="story">
-    You are not behind in life. You are growing quietly.
+  <div class="cloud">
+    I am the main character. I do not perform. I arrive.
   </div>
 
-  <textarea id="story"></textarea>
+  <div class="section">
+    <textarea class="big-input"></textarea>
+  </div>
+</div>
+  
+<!-- STORY -->
+<div class="page">
+  <h1 class="heading">Real Story</h1>
+
+  <div class="section story">
+    You are not behind in life. You are growing quietly,
+    and one day everything will make sense.
+  </div>
+
+  <div class="section">
+    <textarea class="big-input"></textarea>
+  </div>
 </div>
 
 <!-- GLOW -->
@@ -158,15 +210,14 @@
 
 <!-- CLOSING -->
 <div class="page">
-  <h2 class="heading">Closing</h2>
+  <h1 class="heading">Closing</h1>
 
-  <p>You are enough 💖</p>
-
-  <textarea id="close"></textarea>
+  <div class="section">
+    <p>You are enough 💖</p>
+    <textarea class="big-input"></textarea>
+  </div>
+  
 </div>
-
-</div>
-
 <!-- NAV -->
 <div class="nav">
   <button onclick="prev()">⬅</button>
