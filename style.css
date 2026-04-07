@@ -130,10 +130,51 @@ textarea {
   margin-top: 5px;
 }
 /* MOOD */
+.title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-family: "Playfair Display", serif;
+}
+
+/* DATE INPUT */
+.date-input {
+  display: block;
+  margin: 0 auto 15px auto;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+/* BIG TEXT BOXES */
+.big-box {
+  width: 100%;
+  height: 120px;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 15px;
+  border: none;
+  background: #fff0f6;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  resize: none;
+  outline: none;
+}
+
+/* MOOD */
+.mood {
+  text-align: center;
+  font-size: 26px;
+  margin-top: 10px;
+}
+
 .mood span {
-  font-size: 22px;
   cursor: pointer;
-  margin-right: 8px;
+  margin: 0 8px;
+  transition: transform 0.2s;
+}
+
+.mood span:hover {
+  transform: scale(1.4);
 }
 
 /* TODO */
