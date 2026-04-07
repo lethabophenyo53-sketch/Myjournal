@@ -139,3 +139,17 @@ window.onload = () => {
 
   loadEntries();
 };
+
+setInterval(() => {
+  const s = document.createElement("div");
+  s.classList.add("sparkle");
+
+  s.style.left = Math.random() * window.innerWidth + "px";
+  s.style.top = window.innerHeight + "px";
+
+  document.body.appendChild(s);
+
+  setTimeout(() => {
+    s.remove();
+  }, 3000);
+}, 300);
