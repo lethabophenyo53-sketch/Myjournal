@@ -22,20 +22,17 @@
 
   <!-- PAGE 1 -->
   <div class="page active">
-    <h2 class="heading">✨ Your Journey Map</h2>
+  <div class="map">
+  <div class="bubble top">Name <input id="name"></div>
+  <div class="bubble left">Age <input id="age"></div>
+  <div class="bubble right">Dreams <input id="dreams"></div>
+  <div class="bubble bottom">Energy <input id="energy"></div>
 
-    <div class="profile-map">
-      <div class="bubble">Name <input id="name"></div>
-      <div class="bubble">Age <input id="age"></div>
-      <div class="bubble">Dream <input id="dream"></div>
-      <div class="bubble">Energy <input id="energy"></div>
-
-      <div class="line l1"></div>
-      <div class="line l2"></div>
-      <div class="line l3"></div>
-    </div>
+  <div class="line l1"></div>
+  <div class="line l2"></div>
+  <div class="line l3"></div>
+</div>
   </div>
-
   <!-- PAGE 2 -->
   <div class="page">
     <h2 class="heading">Weekly Planner</h2>
@@ -96,6 +93,58 @@
   </div>
 
 </div>
+
+  <div class="page">
+  <h1>Daily Reflection 🌷</h1>
+
+  <input type="date" id="date">
+
+  <textarea class="big" id="feel" placeholder="How do you feel?"></textarea>
+  <textarea class="big" id="why" placeholder="Why?"></textarea>
+  <textarea class="big" id="day" placeholder="What happened today?"></textarea>
+
+  <div class="mood">
+    <span onclick="selectMood(this)">😊</span>
+    <span onclick="selectMood(this)">😐</span>
+    <span onclick="selectMood(this)">😢</span>
+    <span onclick="selectMood(this)">😍</span>
+  </div>
+</div>
+
+  <div class="page">
+  <h1>Real Story 📖</h1>
+
+  <p class="subtitle">Your growth, your journey, your truth.</p>
+
+  <textarea class="big" placeholder="Where did your story begin?"></textarea>
+  <textarea class="big" placeholder="What changed you?"></textarea>
+  <textarea class="big" placeholder="What are you becoming?"></textarea>
+</div>
+
+  <div class="page">
+  <h1>Glow Routine ✨</h1>
+
+  <label><input type="checkbox"> Drink water 💧</label><br>
+  <label><input type="checkbox"> Skincare 🧴</label><br>
+  <label><input type="checkbox"> Exercise 🏃‍♀️</label><br>
+  <label><input type="checkbox"> Read / Learn 📚</label><br>
+  <label><input type="checkbox"> Rest 💤</label>
+</div>
+
+  <div class="page">
+  <h1>Closing 💌</h1>
+
+  <textarea class="big" placeholder="What did you learn this week?"></textarea>
+  <textarea class="big" placeholder="What are you grateful for?"></textarea>
+
+  <p style="text-align:center; margin-top:15px;">
+    ✨ You survived, you grew, you became stronger ✨
+  </p>
+</div>
+
+  
+
+  
 
 <!-- NAV -->
 <div class="nav">
