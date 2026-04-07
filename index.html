@@ -21,18 +21,38 @@
 <div class="book" id="book">
 
   <!-- PAGE 1 -->
-  <div class="page active">
-  <div class="map">
-  <div class="bubble top">Name <input id="name"></div>
-  <div class="bubble left">Age <input id="age"></div>
-  <div class="bubble right">Dreams <input id="dreams"></div>
-  <div class="bubble bottom">Energy <input id="energy"></div>
+<div class="page">
+  <h1>Your Journey Map ✨</h1>
 
-  <div class="line l1"></div>
-  <div class="line l2"></div>
-  <div class="line l3"></div>
-</div>
+  <div class="map">
+
+    <div class="bubble top">
+      Name
+      <input id="name">
+    </div>
+
+    <div class="bubble left">
+      Age
+      <input id="age">
+    </div>
+
+    <div class="bubble right">
+      Dream
+      <input id="dream">
+    </div>
+
+    <div class="bubble bottom">
+      Energy
+      <input id="energy">
+    </div>
+
+    <!-- CONNECTING LINES -->
+    <div class="line vertical"></div>
+    <div class="line horizontal"></div>
+
   </div>
+</div>
+
   <!-- PAGE 2 -->
   <div class="page">
     <h2 class="heading">Weekly Planner</h2>
@@ -95,23 +115,6 @@
 </div>
 
   <div class="page">
-  <h1>Daily Reflection 🌷</h1>
-
-  <input type="date" id="date">
-
-  <textarea class="big" id="feel" placeholder="How do you feel?"></textarea>
-  <textarea class="big" id="why" placeholder="Why?"></textarea>
-  <textarea class="big" id="day" placeholder="What happened today?"></textarea>
-
-  <div class="mood">
-    <span onclick="selectMood(this)">😊</span>
-    <span onclick="selectMood(this)">😐</span>
-    <span onclick="selectMood(this)">😢</span>
-    <span onclick="selectMood(this)">😍</span>
-  </div>
-</div>
-
-  <div class="page">
   <h1>Real Story 📖</h1>
 
   <p class="subtitle">Your growth, your journey, your truth.</p>
@@ -141,8 +144,6 @@
     ✨ You survived, you grew, you became stronger ✨
   </p>
 </div>
-
-  
 
   
 
