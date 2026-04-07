@@ -83,17 +83,56 @@ textarea,input{
 .l3{width:100px;bottom:70px;left:50%;transform:translateX(-50%);}
 
 /* week */
-.week{display:flex;gap:10px;}
-.left{width:30%;}
-.right{width:70%;}
-.card{
-  background:#fff;
-  padding:10px;
-  margin:5px;
-  border-radius:10px;
+.week-container {
+  display: flex;
+  gap: 20px;
 }
-.card textarea{height:60px;}
-.notes{height:120px;}
+
+/* LEFT SIDE */
+.left {
+  width: 40%;
+}
+
+.week-box {
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  background: inherit; /* uses your theme */
+}
+
+.notes-box {
+  padding: 15px;
+  border-radius: 15px;
+  background: inherit;
+}
+
+.notes-box textarea {
+  width: 100%;
+  height: 220px;
+}
+
+/* RIGHT SIDE */
+.right {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* DAY CARDS (NO COLOR CHANGE) */
+.day-card {
+  padding: 12px;
+  border-radius: 12px;
+  background: white; /* or keep your pink if you want */
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+
+.day-card textarea {
+  width: 100%;
+  height: 50px;
+  border: none;
+  background: transparent;
+}
 
 /* todo */
 .todo{display:block;margin:5px 0;}
