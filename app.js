@@ -74,3 +74,42 @@ function saveEntry() {
   alert("Saved successfully ✨");
   loadEntries();
 }
+
+function loadEntries() {
+  const list = document.getElementById("entryList");
+  if (!list) return;
+
+  let entries = JSON.parse(localStorage.getItem("entries")) || [];
+
+  list.innerHTML = "";
+
+  entries.forEach((e, index) => {
+    const div = document.createElement("div");
+    div.classList.add("entry-card");
+
+    div.innerHTML = `
+      <h3>${e.date}</h3>
+      <p>${e.feel}</p>
+    `;
+
+    div.onclick = () => openEntry(index);
+
+    list.appendChild(div);
+  });
+}
+function openEntry(index) {
+  let entries = JSON.parse(localStorage.getItem("entries"));
+
+  const e = entries[index];
+
+  alert(
+    "📅 " + e.date +
+    "\n\n💖 Feeling: " + e.feel +
+    "\n\n🌷 Why: " + e.why +
+    "\n\n📖 Day: " + e.day
+  );
+}
+function showNewEntry() {
+  document.getElementById("homePage").style.display = "none";
+  document.getElementById("journalPage").style.display = "block";
+}
