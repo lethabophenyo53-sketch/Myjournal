@@ -1,15 +1,5 @@
-let pages;
 let current = 0;
-
-document.addEventListener("DOMContentLoaded", () => {
-  pages = document.querySelectorAll(".page");
-});
-
-function openBook() {
-  document.querySelector(".cover").style.display = "none";
-  document.getElementById("book").style.display = "block";
-  showPage(0);
-}
+const pages = document.querySelectorAll(".page");
 
 function showPage(i) {
   pages.forEach(p => p.classList.remove("active"));
@@ -17,55 +7,47 @@ function showPage(i) {
 }
 
 function next() {
-  if (current < pages.length - 1) {
-    current++;
-    showPage(current);
-  }
+  if (current < pages.length - 1) current++;
+  showPage(current);
 }
 
 function prev() {
-  if (current > 0) {
-    current--;
-    showPage(current);
-  }
+  if (current > 0) current--;
+  showPage(current);
 }
 
-/* EMOJI RAIN */
-function selectMood(el) {
-  let emoji = el.textContent;
+function openBook() {
+  document.querySelector(".cover").style.display = "none";
+  document.getElementById("book").style.display = "block";
+}
 
-  for (let i = 0; i < 25; i++) {
+/* SAVE */
+const today = new Date().toISOString().split("T")[0];
+const fields = document.querySelectorAll("input, textarea");
+
+window.onload = () => {
+  fields.forEach(f => {
+    const saved = localStorage.getItem(today + "-" + f.id);
+    if (saved) f.value = saved;
+  });
+};
+
+fields.forEach(f => {
+  f.addEventListener("input", () => {
+    localStorage.setItem(today + "-" + f.id, f.value);
+  });
+});
+
+/* EMOJI RAIN */
+function rain(emoji) {
+  for (let i = 0; i < 20; i++) {
     let drop = document.createElement("div");
     drop.className = "emoji-drop";
     drop.innerText = emoji;
-
     drop.style.left = Math.random() * 100 + "vw";
-    drop.style.position = "fixed";
-    drop.style.top = "-20px";
-    drop.style.animation = "fall 4s linear";
-
+    drop.style.animationDuration = (Math.random() * 2 + 2) + "s";
     document.body.appendChild(drop);
 
     setTimeout(() => drop.remove(), 4000);
   }
 }
-const today = new Date().toISOString().split("T")[0];
-
-const fields = document.querySelectorAll("input, textarea");
-
-/* LOAD */
-window.onload = () => {
-  fields.forEach(f => {
-    const key = today + "-" + f.id;
-    const saved = localStorage.getItem(key);
-    if (saved) f.value = saved;
-  });
-};
-
-/* SAVE */
-fields.forEach(f => {
-  f.addEventListener("input", () => {
-    const key = today + "-" + f.id;
-    localStorage.setItem(key, f.value);
-  });
-});
