@@ -1,37 +1,35 @@
-let pages = [];
-let current = 0;
+let currentPage = 0;
 
-document.addEventListener("DOMContentLoaded", () => {
-  pages = document.querySelectorAll(".page");
-});
+const pages = document.querySelectorAll(".page");
+const book = document.getElementById("book");
+const cover = document.querySelector(".cover");
 
 function openBook() {
-  document.querySelector(".cover").style.display = "none";
-  document.getElementById("book").style.display = "block";
-
-  pages = document.querySelectorAll(".page"); // FORCE REFRESH
-  current = 0;
-  showPage(current);
+  cover.style.display = "none";
+  book.style.display = "block";
+  showPage(0);
 }
 
-function showPage(i) {
+function showPage(index) {
   pages.forEach(p => p.classList.remove("active"));
-
-  if (pages[i]) {
-    pages[i].classList.add("active");
-  }
+  pages[index].classList.add("active");
 }
 
 function next() {
-  if (current < pages.length - 1) {
-    current++;
-    showPage(current);
+  if (currentPage < pages.length - 1) {
+    currentPage++;
+    showPage(currentPage);
   }
 }
 
 function prev() {
-  if (current > 0) {
-    current--;
-    showPage(current);
+  if (currentPage > 0) {
+    currentPage--;
+    showPage(currentPage);
   }
+}
+
+function selectMood(el) {
+  document.querySelectorAll(".mood span").forEach(s => s.style.transform = "scale(1)");
+  el.style.transform = "scale(1.4)";
 }
