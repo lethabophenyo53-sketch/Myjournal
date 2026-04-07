@@ -113,3 +113,29 @@ function showNewEntry() {
   document.getElementById("homePage").style.display = "none";
   document.getElementById("journalPage").style.display = "block";
 }
+
+let audio = new Audio();
+
+function changeMusic(song) {
+  audio.pause();
+
+  if (song) {
+    audio = new Audio(song);
+    audio.loop = true;
+    audio.play();
+  }
+}
+
+function changeFont(font) {
+  document.body.style.fontFamily = font;
+  localStorage.setItem("font", font);
+}
+
+window.onload = () => {
+  const savedFont = localStorage.getItem("font");
+  if (savedFont) {
+    document.body.style.fontFamily = savedFont;
+  }
+
+  loadEntries();
+};
