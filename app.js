@@ -1,7 +1,12 @@
 let currentPage = 0;
-const pages = document.querySelectorAll(".page");
+const pages = document.querySelectorAll("#journalPage .page");
 
-/* NAV */
+/* COVER */
+function enterApp(){
+  document.getElementById("cover").style.display="none";
+}
+
+/* NAVIGATION */
 function showPage(i){
   pages.forEach(p=>p.classList.remove("active"));
   pages[i].classList.add("active");
@@ -25,6 +30,8 @@ function prev(){
 function openJournal(){
   document.getElementById("homePage").classList.add("hidden");
   document.getElementById("journalPage").classList.remove("hidden");
+  currentPage=0;
+  showPage(currentPage);
 }
 
 function openSettings(){
@@ -49,7 +56,6 @@ function saveEntry(){
   data.push(entry);
 
   localStorage.setItem("entries", JSON.stringify(data));
-
   alert("Saved 💖");
 }
 
@@ -95,5 +101,5 @@ function changeMusic(song){
   }
 }
 
-/* LOAD ON START */
-window.onload=loadEntries;
+/* START */
+window.onload = loadEntries;
