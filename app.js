@@ -51,3 +51,26 @@ function moodRain(emoji) {
     }, 3000);
   }
 }
+
+// ===================== SAVE ENTRY =====================
+function saveEntry() {
+  const date = document.getElementById("date").value;
+  const feel = document.getElementById("feel").value;
+  const why = document.getElementById("why").value;
+  const day = document.getElementById("whatHappened").value;
+
+  if (!date) {
+    alert("Please select a date first 💖");
+    return;
+  }
+
+  const entry = { date, feel, why, day };
+
+  let entries = JSON.parse(localStorage.getItem("entries")) || [];
+  entries.push(entry);
+
+  localStorage.setItem("entries", JSON.stringify(entries));
+
+  alert("Saved successfully ✨");
+  loadEntries();
+}
