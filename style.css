@@ -4,6 +4,19 @@ body {
   background:linear-gradient(135deg,#ffe0f0,#e0f2ff);
 }
 
+/* cover */
+.cover {
+  position:fixed;
+  width:100%;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#ffe0f0,#e0f2ff);
+  z-index:999;
+}
+
 /* screens */
 .screen { padding:20px; }
 .hidden { display:none; }
@@ -21,8 +34,7 @@ body {
   padding:10px 20px;
   border:none;
   border-radius:12px;
-  background:#fff;
-  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+  background:white;
 }
 
 /* pages */
@@ -34,7 +46,6 @@ body {
   max-width:800px;
   margin:auto;
 }
-
 .page.active { display:block; }
 
 /* inputs */
@@ -47,28 +58,14 @@ textarea, input {
   background:#ffe6f0;
 }
 
-/* big */
-.big-box {
-  height:120px;
-}
-
-/* pink story */
-.pink-box {
-  height:200px;
-  background:#ffd6e7;
-}
+.big-box { height:120px; }
+.pink-box { height:200px; background:#ffd6e7; }
 
 /* week */
 .week { display:flex; gap:10px; }
 .week-left { width:40%; }
 .week-right { width:60%; }
-
-.day {
-  background:white;
-  padding:10px;
-  margin:5px 0;
-  border-radius:12px;
-}
+.day { margin:5px 0; }
 
 /* todo */
 .todo-box {
@@ -85,37 +82,27 @@ textarea, input {
   height:300px;
   margin:auto;
 }
-
-.bubble {
-  position:absolute;
-  padding:10px;
-  border-radius:15px;
-}
-
+.bubble { position:absolute; padding:10px; border-radius:15px; }
 .top {top:0; left:50%; transform:translateX(-50%);}
 .left {top:50%; left:0; transform:translateY(-50%);}
 .right {top:50%; right:0; transform:translateY(-50%);}
 .bottom {bottom:0; left:50%; transform:translateX(-50%);}
 
-.pink {background:#ffd6e7;}
-.blue {background:#d6f0ff;}
-.purple {background:#e6d6ff;}
-.yellow {background:#fff4c2;}
+.pink{background:#ffd6e7;}
+.blue{background:#d6f0ff;}
+.purple{background:#e6d6ff;}
+.yellow{background:#fff4c2;}
 
-.line.v {
-  position:absolute;
-  width:2px;
-  height:100%;
-  background:#ccc;
-  left:50%;
-}
+.line.v { position:absolute; width:2px; height:100%; background:#ccc; left:50%; }
+.line.h { position:absolute; height:2px; width:100%; background:#ccc; top:50%; }
 
-.line.h {
-  position:absolute;
-  height:2px;
-  width:100%;
-  background:#ccc;
-  top:50%;
+/* nav */
+.nav { text-align:center; margin-top:15px; }
+.nav button {
+  padding:12px;
+  border-radius:50%;
+  background:#ffb6c1;
+  border:none;
 }
 
 /* mood rain */
@@ -124,7 +111,6 @@ textarea, input {
   top:-20px;
   animation:drop 3s linear;
 }
-
 @keyframes drop {
   to { transform:translateY(100vh); opacity:0; }
 }
