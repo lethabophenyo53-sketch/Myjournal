@@ -3,6 +3,23 @@ body {
   font-family: "Poppins", sans-serif;
   background: linear-gradient(135deg, #ffe0f0, #e0f2ff);
 }
+body::before {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,0.7) 2px, transparent 2px),
+    radial-gradient(circle, rgba(255,192,203,0.4) 1px, transparent 1px);
+  background-size: 60px 60px, 40px 40px;
+  animation: sparkle 8s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes sparkle {
+  from { transform: translateY(0); }
+  to { transform: translateY(-60px); }
+}
 
 /* COVER */
 .cover {
@@ -64,25 +81,79 @@ body {
 /* MAP */
 .profile-map {
   position: relative;
-  height: 300px;
+  width: 100%;
+  max-width: 700px;
+  height: 420px;
+  margin: auto;
 }
 
+/* BUBBLES */
 .bubble {
   position: absolute;
-  background: white;
-  padding: 10px;
-  border-radius: 15px;
+  background: #ffffff;
+  padding: 14px 16px;
+  border-radius: 20px;
+  width: 160px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(255,182,193,0.3);
+  font-size: 14px;
+  transition: 0.3s;
 }
 
-.bubble:nth-child(1){top:10px;left:50%;}
-.bubble:nth-child(2){top:120px;left:10px;}
-.bubble:nth-child(3){top:120px;right:10px;}
-.bubble:nth-child(4){bottom:10px;left:50%;}
+.bubble:hover {
+  transform: scale(1.05);
+}
 
+/* INPUT */
+.bubble input {
+  width: 90%;
+  margin-top: 5px;
+  border: none;
+  border-bottom: 2px solid #ffc0cb;
+  outline: none;
+  background: transparent;
+}
+
+/* PERFECT POSITIONS */
+.bubble:nth-child(1) { top: 20px; left: 50%; transform: translateX(-50%); }
+.bubble:nth-child(2) { top: 160px; left: 20px; }
+.bubble:nth-child(3) { top: 160px; right: 20px; }
+.bubble:nth-child(4) { bottom: 20px; left: 50%; transform: translateX(-50%); }
 /* WEEK */
 .week-container {
   display: flex;
   gap: 25px;
+}
+
+.line {
+  position: absolute;
+  height: 2px;
+  background: #ff99cc;
+  opacity: 0.6;
+}
+
+/* top → left */
+.l1 {
+  width: 120px;
+  top: 90px;
+  left: 140px;
+  transform: rotate(25deg);
+}
+
+/* top → right */
+.l2 {
+  width: 120px;
+  top: 90px;
+  right: 140px;
+  transform: rotate(-25deg);
+}
+
+/* bottom */
+.l3 {
+  width: 150px;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* LEFT */
@@ -170,5 +241,20 @@ button {
   background: white;
   padding: 20px;
   border-radius: 15px;
+}
+.arrow {
+  position: absolute;
+  font-size: 20px;
+  color: #ff66a3;
+}
+
+.a1 {
+  top: 120px;
+  left: 200px;
+}
+
+.a2 {
+  top: 120px;
+  right: 200px;
 }
 }
