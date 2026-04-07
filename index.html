@@ -34,26 +34,41 @@
 
 <!-- WEEKLY -->
 <div class="page">
-  <h1>Weekly Planner</h1>
 
-  <div class="week">
+  <h1 class="heading">Weekly Planner</h1>
 
+  <div class="week-container">
+
+    <!-- LEFT -->
     <div class="left">
-      <input id="week" placeholder="Week of...">
-      <textarea id="weekly_notes" class="notes"></textarea>
+
+      <div class="week-box">
+        <label>Week of:</label>
+        <input type="text" id="week">
+      </div>
+
+      <div class="notes-box">
+        <h3>Notes</h3>
+        <textarea id="weekly_notes"></textarea>
+      </div>
+
     </div>
 
+    <!-- RIGHT -->
     <div class="right">
-      <div class="card"><b>Mon</b><textarea id="mon"></textarea></div>
-      <div class="card"><b>Tue</b><textarea id="tue"></textarea></div>
-      <div class="card"><b>Wed</b><textarea id="wed"></textarea></div>
-      <div class="card"><b>Thu</b><textarea id="thu"></textarea></div>
-      <div class="card"><b>Fri</b><textarea id="fri"></textarea></div>
-      <div class="card"><b>Sat</b><textarea id="sat"></textarea></div>
-      <div class="card"><b>Sun</b><textarea id="sun"></textarea></div>
+
+      <div class="day-card"><b>Monday</b><textarea id="mon"></textarea></div>
+      <div class="day-card"><b>Tuesday</b><textarea id="tue"></textarea></div>
+      <div class="day-card"><b>Wednesday</b><textarea id="wed"></textarea></div>
+      <div class="day-card"><b>Thursday</b><textarea id="thu"></textarea></div>
+      <div class="day-card"><b>Friday</b><textarea id="fri"></textarea></div>
+      <div class="day-card"><b>Saturday</b><textarea id="sat"></textarea></div>
+      <div class="day-card"><b>Sunday</b><textarea id="sun"></textarea></div>
+
     </div>
 
   </div>
+
 </div>
 
 <!-- TODO -->
