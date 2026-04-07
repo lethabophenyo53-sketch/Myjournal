@@ -216,3 +216,107 @@ button {
   left: 0;
 }
 }
+
+.title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-family: "Playfair Display", serif;
+}
+
+/* MAP WRAPPER */
+.map {
+  position: relative;
+  width: 380px;
+  height: 380px;
+  margin: auto;
+}
+
+/* BUBBLES */
+.bubble {
+  position: absolute;
+  width: 140px;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* TEXTAREA BIG ENOUGH */
+.bubble textarea {
+  width: 100%;
+  height: 80px;
+  margin-top: 8px;
+  border: none;
+  outline: none;
+  resize: none;
+  background: transparent;
+  font-size: 13px;
+}
+
+/* COLORS */
+.pink { background: #ffd6e7; }
+.blue { background: #d6f0ff; }
+.purple { background: #e6d6ff; }
+.yellow { background: #fff4c2; }
+
+/* POSITIONS */
+.top {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.left {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.right {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.bottom {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* LINES */
+.line {
+  position: absolute;
+  background: #ddd;
+  z-index: -1;
+}
+
+.v {
+  width: 2px;
+  height: 100%;
+  left: 50%;
+}
+
+.h {
+  height: 2px;
+  width: 100%;
+  top: 50%;
+}
+
+/* SPARKLES */
+.sparkle {
+  position: absolute;
+  font-size: 18px;
+  animation: float 3s infinite ease-in-out;
+}
+
+.s1 { top: 20px; left: 20px; }
+.s2 { top: 60px; right: 30px; }
+.s3 { bottom: 40px; left: 40px; }
+.s4 { bottom: 20px; right: 20px; }
+
+@keyframes float {
+  0%,100% { transform: translateY(0); opacity: 0.8; }
+  50% { transform: translateY(-10px); opacity: 1; }
+}
