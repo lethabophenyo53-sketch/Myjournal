@@ -117,23 +117,26 @@
   </div>
 </div>
   <!-- PAGE 3 -->
-  <div class="page">
-    <h2 class="heading">🌷 Daily Reflection</h2>
+ <div class="page">
+  <h1 class="title">🌷 Daily Reflection</h1>
 
-    <input type="date" id="date">
+  <input type="date" id="date" class="date-input">
 
-    <textarea class="big-input" id="feel" placeholder="Today I feel..."></textarea>
-    <textarea class="big-input" id="why" placeholder="Why?"></textarea>
-    <textarea class="big-input" id="happened" placeholder="What happened?"></textarea>
+  <textarea id="feel" class="big-box" placeholder="How are you feeling today?"></textarea>
 
-    <div class="mood">
-  <span onclick="moodRain('😊')">😊</span>
-  <span onclick="moodRain('😐')">😐</span>
-  <span onclick="moodRain('😢')">😢</span>
-  <span onclick="moodRain('😍')">😍</span>
-  <span onclick="moodRain('🔥')">🔥</span>
-</div>
+  <textarea id="why" class="big-box" placeholder="Why do you feel this way?"></textarea>
+
+  <textarea id="whatHappened" class="big-box" placeholder="What happened today?"></textarea>
+
+  <!-- MOOD -->
+  <div class="mood">
+    <span onclick="moodRain('😊')">😊</span>
+    <span onclick="moodRain('😐')">😐</span>
+    <span onclick="moodRain('😢')">😢</span>
+    <span onclick="moodRain('😍')">😍</span>
+    <span onclick="moodRain('🔥')">🔥</span>
   </div>
+</div>
 
   <!-- PAGE 4 -->
   <div class="page">
