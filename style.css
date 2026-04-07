@@ -405,7 +405,6 @@ button {
 .fall {
   position: fixed;
   top: -20px;
-  font-size: 24px;
   animation: drop 3s linear forwards;
   z-index: 9999;
 }
