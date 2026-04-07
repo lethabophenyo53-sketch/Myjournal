@@ -6,17 +6,25 @@ body {
 
 /* cover */
 .cover {
-  position:fixed;
-  width:100%;
-  height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  background:linear-gradient(135deg,#ffe0f0,#e0f2ff);
-  z-index:999;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg,#ffe0f0,#e0f2ff);
 }
 
+.cover img {
+  width: 220px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.cover h1 {
+  margin-top: 10px;
+  font-size: 22px;
+}
 /* screens */
 .screen { padding:20px; }
 .hidden { display:none; }
@@ -62,11 +70,41 @@ textarea, input {
 .pink-box { height:200px; background:#ffd6e7; }
 
 /* week */
-.week { display:flex; gap:10px; }
-.week-left { width:40%; }
-.week-right { width:60%; }
-.day { margin:5px 0; }
+.week {
+  display: flex;
+  gap: 20px;
+}
 
+/* LEFT */
+.week-left {
+  width: 35%;
+}
+
+.notes-box {
+  height: 250px;
+  background: #fff0f6;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+/* RIGHT */
+.week-right {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.day {
+  background: white;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.day textarea {
+  width: 100%;
+  height: 50px;
+}
 /* todo */
 .todo-box {
   background:#fff0f6;
@@ -77,21 +115,33 @@ textarea, input {
 
 /* map */
 .map {
-  position:relative;
-  width:300px;
-  height:300px;
-  margin:auto;
+  position: relative;
+  width: 360px;
+  height: 360px;
+  margin: auto;
 }
-.bubble { position:absolute; padding:10px; border-radius:15px; }
-.top {top:0; left:50%; transform:translateX(-50%);}
-.left {top:50%; left:0; transform:translateY(-50%);}
-.right {top:50%; right:0; transform:translateY(-50%);}
-.bottom {bottom:0; left:50%; transform:translateX(-50%);}
 
-.pink{background:#ffd6e7;}
-.blue{background:#d6f0ff;}
-.purple{background:#e6d6ff;}
-.yellow{background:#fff4c2;}
+.bubble {
+  position: absolute;
+  width: 140px;
+  padding: 12px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.bubble textarea {
+  width: 100%;
+  height: 70px;
+  margin-top: 6px;
+  border: none;
+  background: transparent;
+}
+
+/* FIXED POSITIONS */
+.top { top: 0; left: 50%; transform: translateX(-50%); }
+.left { top: 50%; left: 0; transform: translateY(-50%); }
+.right { top: 50%; right: 0; transform: translateY(-50%); }
+.bottom { bottom: 0; left: 50%; transform: translateX(-50%); }
 
 .line.v { position:absolute; width:2px; height:100%; background:#ccc; left:50%; }
 .line.h { position:absolute; height:2px; width:100%; background:#ccc; top:50%; }
@@ -113,4 +163,8 @@ textarea, input {
 }
 @keyframes drop {
   to { transform:translateY(100vh); opacity:0; }
+}
+.mood {
+  text-align: center;
+  font-size: 26px;
 }
