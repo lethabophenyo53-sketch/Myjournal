@@ -205,6 +205,31 @@
     ✨ You survived, you grew, you became stronger ✨
   </p>
 </div>
+  <button class="save-btn" onclick="saveEntry()">💾 Save Entry</button>
+
+  <div class="page">
+
+  <h1 class="title">⚙️ Settings</h1>
+
+  <!-- FONT -->
+  <label>Choose Font</label>
+  <select onchange="changeFont(this.value)">
+    <option value="Poppins">Poppins</option>
+    <option value="Georgia">Georgia</option>
+    <option value="Courier New">Courier</option>
+    <option value="Playfair Display">Elegant</option>
+  </select>
+
+  <!-- MUSIC -->
+  <label>Music</label>
+  <select onchange="changeMusic(this.value)">
+    <option value="">None</option>
+    <option value="soft.mp3">Soft Calm</option>
+    <option value="rain.mp3">Rain</option>
+    <option value="lofi.mp3">Lofi</option>
+  </select>
+
+</div>
 
   
 
@@ -213,7 +238,7 @@
   <button onclick="prev()">⬅</button>
   <button onclick="next()">➡</button>
 </div>
-
+  
 <script src="app.js"></script>
 </body>
 </html>
