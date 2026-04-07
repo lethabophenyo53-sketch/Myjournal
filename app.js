@@ -49,3 +49,23 @@ function selectMood(el) {
     setTimeout(() => drop.remove(), 4000);
   }
 }
+const today = new Date().toISOString().split("T")[0];
+
+const fields = document.querySelectorAll("input, textarea");
+
+/* LOAD */
+window.onload = () => {
+  fields.forEach(f => {
+    const key = today + "-" + f.id;
+    const saved = localStorage.getItem(key);
+    if (saved) f.value = saved;
+  });
+};
+
+/* SAVE */
+fields.forEach(f => {
+  f.addEventListener("input", () => {
+    const key = today + "-" + f.id;
+    localStorage.setItem(key, f.value);
+  });
+});
