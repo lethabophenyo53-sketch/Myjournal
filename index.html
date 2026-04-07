@@ -29,146 +29,222 @@
 
 </div>   
 
+<!-- BOOK -->
 <div class="book" id="book">
 
   <!-- PAGE 1 -->
-  <div class="page">
-    <h1 class="title">✨ Your Journey Map ✨</h1>
+<div class="page">
+  <h1 class="title">✨ Your Journey Map ✨</h1>
 
-    <div class="map">
-      <div class="bubble pink top">
-        <span>💖 Name</span>
-        <textarea></textarea>
-      </div>
+  <div class="map">
 
-      <div class="bubble blue left">
-        <span>🌷 Age</span>
-        <textarea></textarea>
-      </div>
-
-      <div class="bubble purple right">
-        <span>🌈 Dream</span>
-        <textarea></textarea>
-      </div>
-
-      <div class="bubble yellow bottom">
-        <span>⚡ Energy</span>
-        <textarea></textarea>
-      </div>
-
-      <div class="sparkle s1">✨</div>
-      <div class="sparkle s2">💫</div>
-      <div class="sparkle s3">✨</div>
-      <div class="sparkle s4">💖</div>
-
-      <div class="line v"></div>
-      <div class="line h"></div>
+    <div class="bubble pink top">
+      <span>💖 Name</span>
+      <textarea></textarea>
     </div>
+
+    <div class="bubble blue left">
+      <span>🌷 Age</span>
+      <textarea></textarea>
+    </div>
+
+    <div class="bubble purple right">
+      <span>🌈 Dream</span>
+      <textarea></textarea>
+    </div>
+
+    <div class="bubble yellow bottom">
+      <span>⚡ Energy</span>
+      <textarea></textarea>
+    </div>
+
+    <!-- sparkles -->
+    <div class="sparkle s1">✨</div>
+    <div class="sparkle s2">💫</div>
+    <div class="sparkle s3">✨</div>
+    <div class="sparkle s4">💖</div>
+
+    <!-- lines -->
+    <div class="line v"></div>
+    <div class="line h"></div>
+
   </div>
+</div>
 
   <!-- PAGE 2 -->
   <div class="page">
-    <h1 class="title">📅 Weekly Planner</h1>
+  <h1 class="title">📅 Weekly Planner</h1>
 
-    <div class="week">
-      <div class="week-left">
-        <input id="weekOf" placeholder="Week of..." class="week-input">
-        <textarea id="weeklyNotes" class="notes-box"></textarea>
-      </div>
+  <div class="week">
 
-      <div class="week-right">
-        <div class="day"><h3>Mon</h3><textarea></textarea></div>
-        <div class="day"><h3>Tue</h3><textarea></textarea></div>
-        <div class="day"><h3>Wed</h3><textarea></textarea></div>
-        <div class="day"><h3>Thu</h3><textarea></textarea></div>
-        <div class="day"><h3>Fri</h3><textarea></textarea></div>
-        <div class="day"><h3>Sat</h3><textarea></textarea></div>
-        <div class="day"><h3>Sun</h3><textarea></textarea></div>
-      </div>
+    <!-- LEFT SIDE -->
+    <div class="week-left">
+
+      <input id="weekOf" placeholder="Week of (e.g. 6–12 April)" class="week-input">
+
+      <textarea id="weeklyNotes" class="notes-box" placeholder="Weekly notes..."></textarea>
+
     </div>
-  </div>
 
+    <!-- RIGHT SIDE -->
+    <div class="week-right">
+
+      <div class="day">
+        <h3>Mon</h3>
+        <textarea></textarea>
+      </div>
+
+      <div class="day">
+        <h3>Tue</h3>
+        <textarea></textarea>
+      </div>
+
+      <div class="day">
+        <h3>Wed</h3>
+        <textarea></textarea>
+      </div>
+
+      <div class="day">
+        <h3>Thu</h3>
+        <textarea></textarea>
+      </div>
+
+      <div class="day">
+        <h3>Fri</h3>
+        <textarea></textarea>
+      </div>
+
+      <div class="day">
+        <h3>Sat</h3>
+        <textarea></textarea>
+      </div>
+
+      <div class="day">
+        <h3>Sun</h3>
+        <textarea></textarea>
+      </div>
+
+    </div>
+
+  </div>
+</div>
   <!-- PAGE 3 -->
-  <div class="page">
-    <h1 class="title">🌷 Daily Reflection</h1>
+ <div class="page">
+  <h1 class="title">🌷 Daily Reflection</h1>
 
-    <input type="date" id="date" class="date-input">
+  <input type="date" id="date" class="date-input">
 
-    <textarea id="feel" class="big-box"></textarea>
-    <textarea id="why" class="big-box"></textarea>
-    <textarea id="whatHappened" class="big-box"></textarea>
+  <textarea id="feel" class="big-box" placeholder="How are you feeling today?"></textarea>
 
-    <div class="mood">
-      <span onclick="moodRain('😊')">😊</span>
-      <span onclick="moodRain('😐')">😐</span>
-      <span onclick="moodRain('😢')">😢</span>
-      <span onclick="moodRain('😍')">😍</span>
-      <span onclick="moodRain('🔥')">🔥</span>
-    </div>
+  <textarea id="why" class="big-box" placeholder="Why do you feel this way?"></textarea>
+
+  <textarea id="whatHappened" class="big-box" placeholder="What happened today?"></textarea>
+
+  <!-- MOOD -->
+  <div class="mood">
+    <span onclick="moodRain('😊')">😊</span>
+    <span onclick="moodRain('😐')">😐</span>
+    <span onclick="moodRain('😢')">😢</span>
+    <span onclick="moodRain('😍')">😍</span>
+    <span onclick="moodRain('🔥')">🔥</span>
   </div>
+</div>
 
   <!-- PAGE 4 -->
   <div class="page">
-    <h1 class="title">💖 To-Do List</h1>
+  <h1 class="title">💖 To-Do List</h1>
 
-    <div class="todo-container">
-      <div class="todo-item"><input type="text"></div>
-      <div class="todo-item"><input type="text"></div>
-      <div class="todo-item"><input type="text"></div>
-      <div class="todo-item"><input type="text"></div>
+  <div class="todo-container">
+
+    <div class="todo-item">
+      <input type="text" placeholder="Write task...">
     </div>
-  </div>
 
-  <!-- PAGE 5 (FIXED REAL STORY) -->
+    <div class="todo-item">
+      <input type="text" placeholder="Write task...">
+    </div>
+
+    <div class="todo-item">
+      <input type="text" placeholder="Write task...">
+    </div>
+
+    <div class="todo-item">
+      <input type="text" placeholder="Write task...">
+    </div>
+
+  </div>
+</div>
+
   <div class="page">
-    <h1 class="title">📖 Real Story</h1>
+ <div class="page hidden" id="story">
 
-    <p>This is your safe space 💖</p>
+  <h1>📖 Real Story</h1>
 
-    <textarea id="realStory" class="pink-box"></textarea>
+  <p class="story-text">
+    This is your space to write your real thoughts, your growth, your story 💖
+  </p>
 
-    <button onclick="saveStory()">💾 Save Story</button>
-  </div>
+  <textarea id="realStory" class="pink-box" placeholder="Write your real story here..."></textarea>
 
-  <!-- PAGE 6 -->
-  <div class="page">
-    <h1 class="title">✨ Glow Routine</h1>
-
-    <label><input type="checkbox"> Water 💧</label><br>
-    <label><input type="checkbox"> Skincare 🧴</label><br>
-    <label><input type="checkbox"> Exercise 🏃‍♀️</label><br>
-    <label><input type="checkbox"> Learn 📚</label><br>
-  </div>
-
-  <!-- PAGE 7 -->
-  <div class="page">
-    <h1 class="title">💌 Closing</h1>
-
-    <textarea class="big"></textarea>
-    <textarea class="big"></textarea>
-
-    <button onclick="saveEntry()">💾 Save Entry</button>
-  </div>
-
-  <!-- PAGE 8 -->
-  <div class="page">
-    <h1 class="title">⚙️ Settings</h1>
-
-    <label>Font</label>
-    <select onchange="changeFont(this.value)">
-      <option value="Poppins">Poppins</option>
-      <option value="Georgia">Georgia</option>
-      <option value="Playfair Display">Elegant</option>
-    </select>
-
-    <label>Music</label>
-    <select onchange="changeMusic(this.value)">
-      <option value="">None</option>
-      <option value="soft.mp3">Soft</option>
-      <option value="rain.mp3">Rain</option>
-      <option value="lofi.mp3">Lofi</option>
-    </select>
-  </div>
+  <button class="btn" onclick="saveStory()">💾 Save Story</button>
+  <button class="btn" onclick="showPage('home')">⬅ Back</button>
 
 </div>
-    <div class="bubb
+    
+  <div class="page">
+  <h1>Glow Routine ✨</h1>
+
+  <label><input type="checkbox"> Drink water 💧</label><br>
+  <label><input type="checkbox"> Skincare 🧴</label><br>
+  <label><input type="checkbox"> Exercise 🏃‍♀️</label><br>
+  <label><input type="checkbox"> Read / Learn 📚</label><br>
+  <label><input type="checkbox"> Rest 💤</label>
+</div>
+
+  <div class="page">
+  <h1>Closing 💌</h1>
+
+  <textarea class="big" placeholder="What did you learn this week?"></textarea>
+  <textarea class="big" placeholder="What are you grateful for?"></textarea>
+
+  <p style="text-align:center; margin-top:15px;">
+    ✨ You survived, you grew, you became stronger ✨
+  </p>
+</div>
+  <button class="save-btn" onclick="saveEntry()">💾 Save Entry</button>
+
+  <div class="page">
+
+  <h1 class="title">⚙️ Settings</h1>
+
+  <!-- FONT -->
+  <label>Choose Font</label>
+  <select onchange="changeFont(this.value)">
+    <option value="Poppins">Poppins</option>
+    <option value="Georgia">Georgia</option>
+    <option value="Courier New">Courier</option>
+    <option value="Playfair Display">Elegant</option>
+  </select>
+
+  <!-- MUSIC -->
+  <label>Music</label>
+  <select onchange="changeMusic(this.value)">
+    <option value="">None</option>
+    <option value="soft.mp3">Soft Calm</option>
+    <option value="rain.mp3">Rain</option>
+    <option value="lofi.mp3">Lofi</option>
+  </select>
+
+</div>
+
+  
+
+<!-- NAV -->
+<div class="nav">
+  <button onclick="prev()">⬅</button>
+  <button onclick="next()">➡</button>
+</div>
+  
+<script src="app.js"></script>
+</body>
+</html>
