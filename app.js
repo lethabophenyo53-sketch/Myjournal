@@ -153,3 +153,17 @@ setInterval(() => {
     s.remove();
   }, 3000);
 }, 300);
+
+function saveStory() {
+  const story = document.getElementById("realStory").value;
+
+  localStorage.setItem("realStory", story);
+
+  alert("Real story saved 💖");
+}
+
+const savedStory = localStorage.getItem("realStory");
+if (savedStory) {
+  const box = document.getElementById("realStory");
+  if (box) box.value = savedStory;
+}
