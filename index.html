@@ -40,24 +40,56 @@
 
   <!-- WEEKLY -->
   <div class="page">
-    <h2 class="heading">Weekly Planner</h2>
 
-    <div class="week-grid">
-      <div class="day">Mon<textarea></textarea></div>
-      <div class="day">Tue<textarea></textarea></div>
-      <div class="day">Wed<textarea></textarea></div>
-      <div class="day">Thu<textarea></textarea></div>
-      <div class="day">Fri<textarea></textarea></div>
-      <div class="day">Sat<textarea></textarea></div>
-      <div class="day">Sun<textarea></textarea></div>
+  <h1 class="heading">Weekly Planner</h1>
+
+  <div class="week-container">
+
+    <!-- LEFT -->
+    <div class="left">
+
+      <div class="week-box">
+        <label>Week of:</label>
+        <input type="text" id="week">
+      </div>
+
+      <div class="notes-box">
+        <h3>Notes</h3>
+        <textarea id="weekly_notes"></textarea>
+      </div>
+
     </div>
 
-    <h3>To-Do</h3>
-    <input class="todo">
-    <input class="todo">
-    <input class="todo">
+    <!-- RIGHT -->
+    <div class="right">
+
+      <div class="day-card"><b>Monday</b><textarea id="mon"></textarea></div>
+      <div class="day-card"><b>Tuesday</b><textarea id="tue"></textarea></div>
+      <div class="day-card"><b>Wednesday</b><textarea id="wed"></textarea></div>
+      <div class="day-card"><b>Thursday</b><textarea id="thu"></textarea></div>
+      <div class="day-card"><b>Friday</b><textarea id="fri"></textarea></div>
+      <div class="day-card"><b>Saturday</b><textarea id="sat"></textarea></div>
+      <div class="day-card"><b>Sunday</b><textarea id="sun"></textarea></div>
+
+    </div>
+
   </div>
 
+</div>
+  
+  <div class="page">
+
+  <h2 class="heading">💖 To-Do List</h2>
+
+  <div class="todo-page">
+    <input class="todo-input" id="todo1" placeholder="Write your task...">
+    <input class="todo-input" id="todo2">
+    <input class="todo-input" id="todo3">
+    <input class="todo-input" id="todo4">
+    <input class="todo-input" id="todo5">
+  </div>
+
+</div>
   <!-- DAILY REFLECTION -->
   <div class="page">
     <h2 class="heading">🌷 Daily Reflection</h2>
