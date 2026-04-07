@@ -10,7 +10,14 @@
 
 <body>
 
-<!-- HOME PAGE -->
+<!-- COVER -->
+<div id="cover" class="cover" onclick="enterApp()">
+  <img src="Cover page.jpg">
+  <h1>✨ Veloura Journal ✨</h1>
+  <p>Click to enter</p>
+</div>
+
+<!-- HOME -->
 <div id="homePage" class="screen">
   <h1 class="main-title">🌸 My Journal</h1>
 
@@ -47,13 +54,11 @@
   <!-- PAGE 1 -->
   <div class="page active">
     <h2 class="title">✨ Your Journey Map</h2>
-
     <div class="map">
       <div class="bubble pink top">Name<textarea></textarea></div>
       <div class="bubble blue left">Age<textarea></textarea></div>
       <div class="bubble purple right">Dream<textarea></textarea></div>
       <div class="bubble yellow bottom">Energy<textarea></textarea></div>
-
       <div class="line v"></div>
       <div class="line h"></div>
     </div>
@@ -62,13 +67,11 @@
   <!-- PAGE 2 -->
   <div class="page">
     <h2 class="title">📅 Weekly Planner</h2>
-
     <div class="week">
       <div class="week-left">
         <input placeholder="Week of...">
         <textarea class="notes-box"></textarea>
       </div>
-
       <div class="week-right">
         <div class="day"><h4>Mon</h4><textarea></textarea></div>
         <div class="day"><h4>Tue</h4><textarea></textarea></div>
@@ -84,9 +87,7 @@
   <!-- PAGE 3 -->
   <div class="page">
     <h2 class="title">🌷 Daily Reflection</h2>
-
     <input type="date" id="date">
-
     <textarea id="feel" class="big-box" placeholder="How do you feel?"></textarea>
     <textarea id="why" class="big-box" placeholder="Why?"></textarea>
     <textarea id="what" class="big-box" placeholder="What happened?"></textarea>
@@ -102,7 +103,6 @@
   <!-- PAGE 4 -->
   <div class="page">
     <h2 class="title">💖 To-Do</h2>
-
     <div class="todo-box"><input placeholder="Task..."></div>
     <div class="todo-box"><input placeholder="Task..."></div>
     <div class="todo-box"><input placeholder="Task..."></div>
@@ -112,27 +112,24 @@
   <!-- PAGE 5 -->
   <div class="page">
     <h2 class="title">📖 Real Story</h2>
-
     <textarea id="story" class="pink-box" placeholder="Write your truth..."></textarea>
   </div>
 
   <!-- PAGE 6 -->
   <div class="page">
     <h2 class="title">✨ Glow Routine</h2>
-
     <label><input type="checkbox"> Water 💧</label><br>
     <label><input type="checkbox"> Skincare 🧴</label><br>
-    <label><input type="checkbox"> Exercise 🏃‍♀️</label><br>
+    <label><input type="checkbox"> Exercise 🏃‍♀️</label>
   </div>
 
   <!-- PAGE 7 -->
   <div class="page">
     <h2 class="title">💌 Closing</h2>
-
     <textarea class="big-box"></textarea>
     <textarea class="big-box"></textarea>
-
     <button class="btn" onclick="saveEntry()">💾 Save Entry</button>
+    <button class="btn" onclick="goHome()">🏠 Finish</button>
   </div>
 
   <!-- NAV -->
