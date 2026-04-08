@@ -604,3 +604,16 @@ textarea, input {
 .blue { background:#d6f0ff; }
 .purple { background:#e6d6ff; }
 .yellow { background:#fff4c2; }
+
+.streak-box {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 18px;
+  background: #fff0f6;
+  padding: 10px;
+  border-radius: 15px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
