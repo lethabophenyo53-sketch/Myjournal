@@ -299,22 +299,52 @@ textarea, input {
   opacity: 0.6;
 }
 /* GLOW FIXED (NO RIGHT ALIGN ISSUE) */
-.glow-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+/* SUBTITLE */
+.glow-subtitle {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 14px;
+  opacity: 0.7;
 }
 
+/* GRID (THIS FIXES ALIGNMENT 🔥) */
+.glow-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+/* CARD */
 .glow-card {
-  background: #fff0f6;
-  padding: 12px;
-  border-radius: 14px;
-}
-
-.glow-card label {
   display: flex;
   align-items: center;
   gap: 10px;
+
+  background: #fff0f6;
+  padding: 12px;
+  border-radius: 15px;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* CHECKBOX */
+.glow-card input {
+  width: 18px;
+  height: 18px;
+  accent-color: #ff6fa5;
+  cursor: pointer;
+}
+
+/* TEXT */
+.glow-card span {
+  font-size: 14px;
+}
+
+/* MOBILE FIX (STACK NICELY) */
+@media (max-width: 600px) {
+  .glow-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* MOOD RAIN */
