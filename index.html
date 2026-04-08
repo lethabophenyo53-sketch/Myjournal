@@ -21,19 +21,24 @@
 </div>
   
 <!-- HOME -->
-<div id="homePage" class="screen">
+<!-- HOME -->
+<div id="homePage" class="screen hidden">
+
   <h1 class="main-title">🌸 My Journal</h1>
 
-  <button class="btn" onclick="openJournal()">✨ New Entry</button>
-  <button class="btn" onclick="openSettings()">⚙️ Settings</button>
-  
-<div class="home-sparkle s1">✨</div>
-<div class="home-sparkle s2">💖</div>
-<div class="home-sparkle s3">💫</div>
+  <button class="btn main-btn" onclick="openJournal()">✨ New Entry</button>
+  <button class="btn main-btn" onclick="openSettings()">⚙️ Settings</button>
 
-  <div id="entries"></div>
+  <!-- SPARKLES -->
+  <div class="home-sparkle s1">✨</div>
+  <div class="home-sparkle s2">💖</div>
+  <div class="home-sparkle s3">💫</div>
+
+  <!-- SAVED ENTRIES -->
+  <h3 class="saved-title">📖 Your Entries</h3>
+  <div id="entries" class="entries-box"></div>
+
 </div>
-
 <!-- SETTINGS -->
 <div id="settingsPage" class="screen hidden">
 
