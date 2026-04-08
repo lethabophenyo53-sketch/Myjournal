@@ -118,3 +118,14 @@ window.addEventListener("load", () => {
 
 /* START */
 window.onload = loadEntries;
+
+
+function finishJournal() {
+  alert("Your entry is complete 💖");
+
+  // go back to home
+  document.getElementById("journalPage").classList.add("hidden");
+  document.getElementById("homePage").classList.remove("hidden");
+
+  loadEntries();
+}
