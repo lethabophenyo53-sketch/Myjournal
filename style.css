@@ -219,7 +219,8 @@ textarea, input {
 }
 /* WEEK */
 /* WEEK LAYOUT */
-.week-container {
+/* WEEK LAYOUT */
+.week {
   display: flex;
   gap: 20px;
   margin-top: 20px;
@@ -233,17 +234,18 @@ textarea, input {
   gap: 15px;
 }
 
+/* INPUT */
 .week-input {
   padding: 12px;
   border-radius: 12px;
   border: none;
   background: #ffe6f0;
-  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-/* NOTES BOX */
-.week-notes {
-  height: 260px;
+/* NOTES */
+.notes-box {
+  height: 250px;
   border-radius: 15px;
   border: none;
   padding: 12px;
@@ -260,32 +262,36 @@ textarea, input {
   gap: 12px;
 }
 
-/* DAY CARDS */
-.day-card {
-  background: white;
+/* DAY BLOCK */
+.day {
   padding: 12px;
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
 /* DAY TITLE */
-.day-card span {
+.day h3 {
+  margin: 0;
   font-size: 14px;
-  color: #ff6fa5;
-  font-weight: 600;
+  color: #444;
 }
 
 /* TEXTAREA */
-.day-card textarea {
+.day textarea {
   width: 100%;
-  height: 50px;
+  height: 55px;
   border: none;
   outline: none;
+  resize: none;
   margin-top: 6px;
   background: transparent;
-  resize: none;
 }
 
+/* COLORS */
+.pink { background: #ffd6e7; }
+.blue { background: #d6f0ff; }
+.purple { background: #e6d6ff; }
+.yellow { background: #fff4c2; }
 /* TODO */
 /* CONTAINER */
 .todo-container {
