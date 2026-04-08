@@ -304,3 +304,32 @@ document.addEventListener("input", saveWeek);
 
 // LOAD WHEN PAGE OPENS
 window.addEventListener("load", loadWeek);
+
+function updateStreak() {
+  const today = new Date().toDateString();
+  let lastDate = localStorage.getItem("lastEntryDate");
+  let streak = parseInt(localStorage.getItem("streak")) || 0;
+
+  if (lastDate === today) {
+    // already counted today
+  } else {
+    const yesterday = new Date();
+    yesterday.setDate(yesterday.getDate() - 1);
+
+    if (lastDate === yesterday.toDateString()) {
+      streak++; // continue streak
+    } else {
+      streak = 1; // reset streak
+    }
+
+    localStorage.setItem("lastEntryDate", today);
+    localStorage.setItem("streak", streak);
+  }
+
+  document.getElementById("streakCount").innerText = streak;
+}
+
+// LOAD STREAK ON PAGE LOAD
+window.addEventListener("load", () => {
+  updateStreak();
+});
