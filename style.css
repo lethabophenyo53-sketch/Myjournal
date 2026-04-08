@@ -563,3 +563,12 @@ textarea, input {
 .finish-btn:hover {
   transform: scale(1.05);
 }
+
+.home-sparkle {
+  position:absolute;
+  font-size:20px;
+  animation: float 3s infinite;
+}
+.s1 { top:20px; left:20px; }
+.s2 { top:80px; right:30px; }
+.s3 { bottom:50px; left:40px; }
