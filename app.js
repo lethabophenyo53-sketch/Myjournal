@@ -217,3 +217,41 @@ setInterval(() => {
     s.remove();
   }, 3000);
 }, 300);
+
+let audio = new Audio();
+
+function changeMusic(song) {
+  audio.pause();
+  if (song) {
+    audio = new Audio("assets/" + song); // put music in /assets
+    audio.loop = true;
+    audio.play();
+  }
+}
+
+function changeFont(font) {
+  document.body.style.fontFamily = font;
+  localStorage.setItem("font", font);
+}
+
+function changeColor(color) {
+  document.body.style.background = color;
+  localStorage.setItem("bgColor", color);
+}
+
+function changeBg(bg) {
+  if (bg) {
+    document.body.style.background = `url('assets/${bg}') center/cover no-repeat`;
+    localStorage.setItem("bgImage", bg);
+  }
+}
+
+window.onload = () => {
+  const font = localStorage.getItem("font");
+  const color = localStorage.getItem("bgColor");
+  const bg = localStorage.getItem("bgImage");
+
+  if (font) document.body.style.fontFamily = font;
+  if (color) document.body.style.background = color;
+  if (bg) document.body.style.background = `url('assets/${bg}') center/cover no-repeat`;
+};
