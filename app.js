@@ -13,7 +13,6 @@ function enterApp() {
   document.getElementById("homePage").classList.remove("hidden");
 }
 
-
 // ===================== NAVIGATION =====================
 function showPage(index) {
   pages.forEach(p => p.classList.remove("active"));
