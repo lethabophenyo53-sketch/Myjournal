@@ -19,22 +19,27 @@
     <p>Tap to enter</p>
   </div>
 </div>
-
-<!-- HOME -->
+  
 <div id="homePage" class="screen hidden">
   <h1 class="main-title">🌸 My Journal</h1>
 
   <button class="btn" onclick="openJournal()">✨ New Entry</button>
   <button class="btn" onclick="openSettings()">⚙️ Settings</button>
 
+  <div class="home-sparkle s1">✨</div>
+  <div class="home-sparkle s2">💖</div>
+  <div class="home-sparkle s3">💫</div>
+
   <div id="entries"></div>
 </div>
 
 <!-- SETTINGS -->
 <div id="settingsPage" class="screen hidden">
+
   <h1 class="main-title">⚙️ Settings</h1>
 
-  <label>Font</label>
+  <!-- FONT -->
+  <label>Choose Font</label>
   <select onchange="changeFont(this.value)">
     <option>Poppins</option>
     <option>Playfair Display</option>
@@ -48,6 +53,7 @@
     <option>Impact</option>
   </select>
 
+  <!-- MUSIC -->
   <label>Music</label>
   <select onchange="changeMusic(this.value)">
     <option value="">None</option>
@@ -55,7 +61,7 @@
     <option value="music2.mp3">Rain</option>
     <option value="music3.mp3">Lofi</option>
     <option value="music4.mp3">Ocean</option>
-    <option value="music5.mp3">Calm Wind</option>
+    <option value="music5.mp3">Wind</option>
     <option value="music6.mp3">Night</option>
     <option value="music7.mp3">Meditation</option>
     <option value="music8.mp3">Nature</option>
@@ -63,18 +69,21 @@
     <option value="music10.mp3">Focus</option>
   </select>
 
+  <!-- COLOR -->
   <label>Background Color</label>
   <input type="color" onchange="changeColor(this.value)">
 
   <button class="btn" onclick="goHome()">⬅ Back</button>
+
 </div>
 
 <!-- JOURNAL -->
 <div id="journalPage" class="screen hidden">
 
 <!-- PAGE 1 -->
-<div class="page active">
+<div class="page">
   <h2 class="title">✨ Your Journey Map ✨</h2>
+
   <div class="map">
 
     <div class="bubble pink top">
@@ -100,9 +109,14 @@
     <div class="line vertical"></div>
     <div class="line horizontal"></div>
 
+    <div class="sparkle s1">✨</div>
+    <div class="sparkle s2">💖</div>
+    <div class="sparkle s3">💫</div>
+    <div class="sparkle s4">✨</div>
+
   </div>
 </div>
-
+  
 <!-- PAGE 2 -->
 <div class="page">
   <h2 class="title">📅 Weekly Planner</h2>
@@ -119,63 +133,117 @@
 
   </div>
 </div>
-
+  
 <!-- PAGE 3 -->
 <div class="page">
   <h2 class="title">🌷 Daily Reflection</h2>
 
-  <input type="date">
+  <input type="date" class="date-input">
 
-  <textarea class="box pink" placeholder="How do you feel?"></textarea>
-  <textarea class="box blue" placeholder="Why?"></textarea>
-  <textarea class="box purple" placeholder="What happened?"></textarea>
-  <textarea class="box yellow" placeholder="Growth"></textarea>
+  <div class="reflection-grid">
+
+    <textarea class="box pink" placeholder="How do you feel?"></textarea>
+    <textarea class="box blue" placeholder="Why?"></textarea>
+    <textarea class="box purple" placeholder="What happened?"></textarea>
+    <textarea class="box yellow" placeholder="Growth"></textarea>
+
+  </div>
+
+  <div class="mood">
+    <span onclick="moodRain('😊')">😊</span>
+    <span onclick="moodRain('😐')">😐</span>
+    <span onclick="moodRain('😢')">😢</span>
+    <span onclick="moodRain('😍')">😍</span>
+    <span onclick="moodRain('🔥')">🔥</span>
+  </div>
 
 </div>
-
+  
 <!-- PAGE 4 -->
 <div class="page">
   <h2 class="title">💖 To-Do List</h2>
 
-  <div class="todo-card"><input type="checkbox"><input type="text"></div>
-  <div class="todo-card"><input type="checkbox"><input type="text"></div>
-  <div class="todo-card"><input type="checkbox"><input type="text"></div>
+  <div class="todo-container">
 
+    <div class="todo-card">
+      <input type="checkbox">
+      <input type="text" placeholder="Task...">
+    </div>
+
+    <div class="todo-card">
+      <input type="checkbox">
+      <input type="text">
+    </div>
+
+    <div class="todo-card">
+      <input type="checkbox">
+      <input type="text">
+    </div>
+
+  </div>
 </div>
-
+  
 <!-- PAGE 5 -->
 <div class="page">
   <h2 class="title">📖 Real Story</h2>
-  <textarea class="story-box"></textarea>
+
+  <p class="story-subtitle">
+    Your journey, your growth, your truth 💖
+  </p>
+
+  <textarea class="story-box"
+    placeholder="Write your story..."></textarea>
+
+  <button class="save-btn">💾 Save Story</button>
+</div>
+
+  <div class="page">
+  <h2 class="title">💭 Daily Affirmation</h2>
+
+  <textarea class="box pink"
+    placeholder="Write your affirmation... e.g. I am strong, I am growing ✨"></textarea>
+
 </div>
 
 <!-- PAGE 6 -->
 <div class="page">
-  <h2 class="title">✨ Glow Routine</h2>
+  <h2 class="title">✨ Glow Routine ✨</h2>
 
-  <div class="glow-card"><input type="checkbox"> 💧 Water</div>
-  <div class="glow-card"><input type="checkbox"> 🧴 Skincare</div>
-  <div class="glow-card"><input type="checkbox"> 🏃‍♀️ Exercise</div>
+  <div class="glow-grid">
 
+    <div class="glow-card"><input type="checkbox"> 💧 Drink Water</div>
+    <div class="glow-card"><input type="checkbox"> 🧴 Skincare</div>
+    <div class="glow-card"><input type="checkbox"> 🏃‍♀️ Exercise</div>
+    <div class="glow-card"><input type="checkbox"> 📚 Read</div>
+    <div class="glow-card"><input type="checkbox"> 🌸 Positive Mindset</div>
+    <div class="glow-card"><input type="checkbox"> 💤 Rest</div>
+
+  </div>
 </div>
 
 <!-- PAGE 7 -->
 <div class="page">
   <h2 class="title">💌 Closing</h2>
 
-  <textarea placeholder="How do you feel?"></textarea>
-  <textarea placeholder="Grateful for?"></textarea>
+  <div class="closing-box">
+    <label>How do you feel?</label>
+    <textarea></textarea>
+  </div>
 
-  <button onclick="saveEntry()">💾 Save</button>
-  <button onclick="finishJournal()">Finish</button>
+  <div class="closing-box">
+    <label>What are you grateful for?</label>
+    <textarea></textarea>
+  </div>
+
+  <button class="save-btn" onclick="saveEntry()">💾 Save Entry</button>
+  <button class="finish-btn" onclick="finishJournal()">🌸 Finish</button>
+
 </div>
 
 <!-- NAV -->
 <div class="nav">
   <button onclick="prev()">⬅</button>
   <button onclick="next()">➡</button>
-</div>
-
 </div>
 
 <script src="app.js"></script>
