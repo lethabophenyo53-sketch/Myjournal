@@ -254,13 +254,50 @@ textarea, input {
 }
 
 /* TODO */
-.todo-box {
-  background: #fff0f6;
-  padding: 10px;
-  border-radius: 12px;
-  margin: 6px 0;
+/* CONTAINER */
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
 }
 
+/* EACH TASK CARD */
+.todo-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  background: #fff0f6;
+  padding: 12px;
+  border-radius: 15px;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* CHECKBOX */
+.todo-card input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #ff6fa5;
+  cursor: pointer;
+}
+
+/* TASK INPUT */
+.todo-card input[type="text"] {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+
+  font-size: 14px;
+}
+
+/* WHEN COMPLETED */
+.todo-card input[type="checkbox"]:checked + input[type="text"] {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
 /* GLOW FIXED (NO RIGHT ALIGN ISSUE) */
 .glow-wrapper {
   display: flex;
