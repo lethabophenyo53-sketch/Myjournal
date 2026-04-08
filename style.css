@@ -7,13 +7,24 @@ body {
 /* COVER */
 .cover {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100vh;
+
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #ffe0f0, #e0f2ff);
+
+  background: linear-gradient(135deg,#ffe0f0,#e0f2ff);
+
+  z-index: 9999; /* 👈 THIS FIXES IT */
+  cursor: pointer;
+}
+
+/* CENTER CONTENT */
+.cover-content {
+  text-align: center;
 }
 
 .cover img {
