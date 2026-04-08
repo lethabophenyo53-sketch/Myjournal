@@ -108,6 +108,8 @@ function saveEntry() {
   alert("Saved successfully ✨");
 }
 
+updateStreak();
+
 
 // ===================== LOAD ENTRIES =====================
 function loadEntries() {
