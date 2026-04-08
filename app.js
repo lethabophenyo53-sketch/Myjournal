@@ -334,3 +334,34 @@ function updateStreak() {
 window.addEventListener("load", () => {
   updateStreak();
 });
+
+let savedEntries = JSON.parse(localStorage.getItem("entries")) || [];
+
+function saveEntry(){
+  let entry = {
+    date: new Date().toLocaleDateString(),
+    text: "Journal entry saved 💖"
+  };
+
+  savedEntries.push(entry);
+  localStorage.setItem("entries", JSON.stringify(savedEntries));
+
+  displayEntries();
+}
+
+function displayEntries(){
+  let box = document.getElementById("entries");
+  box.innerHTML = "";
+
+  savedEntries.reverse().forEach(e => {
+    box.innerHTML += `
+      <div class="entry-card">
+        <strong>${e.date}</strong><br>
+        ${e.text}
+      </div>
+    `;
+  });
+}
+
+// LOAD ON START
+window.onload = displayEntries;
