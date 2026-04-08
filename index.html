@@ -273,16 +273,28 @@
 
   <!-- PAGE 7 -->
 <div class="page">
-  <h2 class="title">💌 Closing</h2>
+  <h1 class="title">💌 Closing</h1>
 
-  <p>How are you feeling right now?</p>
-  <textarea class="big-box"></textarea>
+  <p class="closing-text">
+    Pause for a moment… reflect on your day ✨
+  </p>
 
-  <p>What are you grateful for?</p>
-  <textarea class="big-box"></textarea>
+  <div class="closing-box">
+    <label>🌙 How are you feeling right now?</label>
+    <textarea id="closingFeel" placeholder="Write your feelings..."></textarea>
+  </div>
 
-  <button class="btn" onclick="saveEntry()">💾 Save Entry</button>
-  <button class="btn" onclick="goHome()">🏠 Finish</button>
+  <div class="closing-box">
+    <label>🙏 What are you grateful for?</label>
+    <textarea id="closingGrateful" placeholder="Write what you're thankful for..."></textarea>
+  </div>
+
+  <p class="closing-quote">
+    ✨ You showed up. You tried. You grew. And that is enough. ✨
+  </p>
+
+  <button class="save-btn" onclick="saveEntry()">💾 Save Entry</button>
+  <button class="finish-btn" onclick="finishJournal()">🌸 Finish</button>
 </div>
     
   <!-- NAV -->
