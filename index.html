@@ -150,19 +150,35 @@
   </div>
 </div>
   <!-- PAGE 3 -->
-  <div class="page">
-    <h2 class="title">🌷 Daily Reflection</h2>
-    <input type="date" id="date">
-    <textarea id="feel" class="big-box" placeholder="How do you feel?"></textarea>
-    <textarea id="why" class="big-box" placeholder="Why?"></textarea>
-    <textarea id="what" class="big-box" placeholder="What happened?"></textarea>
+ <div class="page">
+  <h1 class="title">🌷 Daily Reflection</h1>
 
-    <div class="mood">
-      <span onclick="moodRain('😊')">😊</span>
-      <span onclick="moodRain('😐')">😐</span>
-      <span onclick="moodRain('😢')">😢</span>
-      <span onclick="moodRain('😍')">😍</span>
-    </div>
+  <input type="date" id="date" class="date-input">
+
+  <div class="reflection-box">
+    <label>💖 How are you feeling?</label>
+    <textarea id="feel" placeholder="Write your feelings..."></textarea>
+  </div>
+
+  <div class="reflection-box">
+    <label>🌸 Why do you feel this way?</label>
+    <textarea id="why" placeholder="Express yourself..."></textarea>
+  </div>
+
+  <div class="reflection-box">
+    <label>📖 What happened today?</label>
+    <textarea id="whatHappened" placeholder="Tell your story..."></textarea>
+  </div>
+
+  <!-- MOOD -->
+  <div class="mood">
+    <span onclick="moodRain('😊')">😊</span>
+    <span onclick="moodRain('😐')">😐</span>
+    <span onclick="moodRain('😢')">😢</span>
+    <span onclick="moodRain('😍')">😍</span>
+    <span onclick="moodRain('🔥')">🔥</span>
+  </div>
+</div>
     
   <!-- PAGE 4 -->
  <div class="page">
