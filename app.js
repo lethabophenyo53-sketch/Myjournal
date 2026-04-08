@@ -365,3 +365,53 @@ function displayEntries(){
 
 // LOAD ON START
 window.onload = displayEntries;
+
+// FONT
+function changeFont(font){
+  document.body.style.fontFamily = font;
+  localStorage.setItem("font", font);
+}
+
+// COLOR
+function changeColor(color){
+  document.body.style.background = color;
+  localStorage.setItem("color", color);
+}
+
+// BACKGROUND IMAGE
+function changeBg(bg){
+  if(bg === ""){
+    document.body.style.background = "linear-gradient(135deg,#ffe0f0,#e0f2ff)";
+  } else {
+    document.body.style.background = `url(${bg}) center/cover no-repeat`;
+  }
+  localStorage.setItem("bg", bg);
+}
+
+// MUSIC
+let audio = new Audio();
+
+function changeMusic(file){
+  audio.pause();
+  if(file !== ""){
+    audio = new Audio(file);
+    audio.loop = true;
+    audio.play();
+  }
+  localStorage.setItem("music", file);
+}
+
+// LOAD SETTINGS
+window.onload = function(){
+  displayEntries();
+
+  let font = localStorage.getItem("font");
+  let color = localStorage.getItem("color");
+  let bg = localStorage.getItem("bg");
+  let music = localStorage.getItem("music");
+
+  if(font) document.body.style.fontFamily = font;
+  if(color) document.body.style.background = color;
+  if(bg) changeBg(bg);
+  if(music) changeMusic(music);
+}
