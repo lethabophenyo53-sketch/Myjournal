@@ -255,3 +255,52 @@ window.onload = () => {
   if (color) document.body.style.background = color;
   if (bg) document.body.style.background = `url('assets/${bg}') center/cover no-repeat`;
 };
+
+// AUTO SAVE WEEKLY PLANNER
+function saveWeek() {
+  const data = {
+    week: document.getElementById("weekOf").value,
+    notes: document.getElementById("weeklyNotes").value,
+    tasks: []
+  };
+
+  document.querySelectorAll(".day").forEach(day => {
+    let dayData = [];
+
+    day.querySelectorAll("input").forEach(t => {
+      dayData.push(t.value);
+    });
+
+    dayData.push(day.querySelector("textarea").value);
+
+    data.tasks.push(dayData);
+  });
+
+  localStorage.setItem("weeklyPlanner", JSON.stringify(data));
+}
+
+// LOAD DATA
+function loadWeek() {
+  const saved = JSON.parse(localStorage.getItem("weeklyPlanner"));
+  if (!saved) return;
+
+  document.getElementById("weekOf").value = saved.week;
+  document.getElementById("weeklyNotes").value = saved.notes;
+
+  document.querySelectorAll(".day").forEach((day, i) => {
+    let inputs = day.querySelectorAll("input");
+    let note = day.querySelector("textarea");
+
+    inputs.forEach((input, index) => {
+      input.value = saved.tasks[i][index] || "";
+    });
+
+    note.value = saved.tasks[i][inputs.length] || "";
+  });
+}
+
+// AUTO SAVE ON TYPING
+document.addEventListener("input", saveWeek);
+
+// LOAD WHEN PAGE OPENS
+window.addEventListener("load", loadWeek);
