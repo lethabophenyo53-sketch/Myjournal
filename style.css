@@ -185,13 +185,73 @@ textarea, input {
   50% { transform: translateY(-10px); opacity: 1; }
 }
 /* WEEK */
-.week {
+/* WEEK LAYOUT */
+.week-container {
   display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* LEFT SIDE */
+.week-left {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
   gap: 15px;
 }
 
-.week-left { width: 40%; }
-.week-right { width: 60%; }
+.week-input {
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: #ffe6f0;
+  font-size: 14px;
+}
+
+/* NOTES BOX */
+.week-notes {
+  height: 260px;
+  border-radius: 15px;
+  border: none;
+  padding: 12px;
+  background: #fff0f6;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  resize: none;
+}
+
+/* RIGHT SIDE */
+.week-right {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* DAY CARDS */
+.day-card {
+  background: white;
+  padding: 12px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* DAY TITLE */
+.day-card span {
+  font-size: 14px;
+  color: #ff6fa5;
+  font-weight: 600;
+}
+
+/* TEXTAREA */
+.day-card textarea {
+  width: 100%;
+  height: 50px;
+  border: none;
+  outline: none;
+  margin-top: 6px;
+  background: transparent;
+  resize: none;
+}
 
 /* TODO */
 .todo-box {
