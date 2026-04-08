@@ -97,6 +97,23 @@ function changeMusic(song){
     audio.loop=true;
     audio.play();
   }
+
+  function saveStory() {
+  const story = document.getElementById("realStory").value;
+
+  localStorage.setItem("realStory", story);
+
+  alert("Your story is saved 💖");
+}
+
+// LOAD SAVED STORY
+window.addEventListener("load", () => {
+  const saved = localStorage.getItem("realStory");
+  if (saved) {
+    const box = document.getElementById("realStory");
+    if (box) box.value = saved;
+  }
+});
 }
 
 /* START */
