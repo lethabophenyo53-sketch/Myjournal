@@ -8,11 +8,10 @@ let audio = new Audio();
 
 
 // ===================== COVER =====================
-function enterApp() {
+function enterApp(){
   document.getElementById("cover").style.display = "none";
   document.getElementById("homePage").classList.remove("hidden");
 }
-
 // ===================== NAVIGATION =====================
 function showPage(index) {
   pages.forEach(p => p.classList.remove("active"));
