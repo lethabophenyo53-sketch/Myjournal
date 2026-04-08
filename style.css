@@ -18,21 +18,19 @@ body {
 
   background: linear-gradient(135deg,#ffe0f0,#e0f2ff);
 
-  z-index: 9999; /* 👈 THIS FIXES IT */
+  z-index: 9999;
   cursor: pointer;
 }
 
-/* CENTER CONTENT */
 .cover-content {
   text-align: center;
 }
 
 .cover img {
-  width: 220px;
+  width: 200px;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
-
 /* SCREENS */
 .screen { padding: 20px; }
 .hidden { display: none; }
