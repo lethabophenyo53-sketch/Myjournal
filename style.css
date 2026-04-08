@@ -85,7 +85,8 @@ textarea, input {
 
   display: flex;
   gap: 15px;
-  z-index: 1000;
+
+  z-index: 100; /* LOWER than cover */
 }
 
 /* BUTTONS */
