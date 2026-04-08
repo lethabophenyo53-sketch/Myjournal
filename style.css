@@ -465,3 +465,68 @@ textarea, input {
 .save-btn:hover {
   transform: scale(1.05);
 }
+
+/* TEXT */
+.closing-text {
+  text-align: center;
+  margin-bottom: 15px;
+  opacity: 0.7;
+}
+
+/* BOXES */
+.closing-box {
+  background: #fff0f6;
+  padding: 15px;
+  border-radius: 18px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* LABELS */
+.closing-box label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #ff6fa5;
+  font-weight: 600;
+}
+
+/* TEXTAREAS */
+.closing-box textarea {
+  width: 100%;
+  height: 90px;
+  border: none;
+  outline: none;
+  resize: none;
+  background: transparent;
+  font-size: 14px;
+}
+
+/* QUOTE */
+.closing-quote {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+/* FINISH BUTTON */
+.finish-btn {
+  display: block;
+  margin: 10px auto;
+
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+
+  background: #ff6fa5;
+  color: white;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.finish-btn:hover {
+  transform: scale(1.05);
+}
