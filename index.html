@@ -31,23 +31,56 @@
 
 <!-- SETTINGS -->
 <div id="settingsPage" class="screen hidden">
+
   <h1 class="main-title">⚙️ Settings</h1>
 
-  <label>Font</label>
+  <!-- FONT -->
+  <label>Choose Font</label>
   <select onchange="changeFont(this.value)">
     <option value="Poppins">Poppins</option>
+    <option value="Playfair Display">Playfair</option>
     <option value="Georgia">Georgia</option>
-    <option value="Playfair Display">Elegant</option>
+    <option value="Courier New">Courier</option>
+    <option value="Arial">Arial</option>
+    <option value="Verdana">Verdana</option>
+    <option value="Times New Roman">Times</option>
+    <option value="Trebuchet MS">Trebuchet</option>
+    <option value="Comic Sans MS">Fun</option>
+    <option value="Impact">Bold</option>
   </select>
 
-  <label>Music</label>
+  <!-- MUSIC -->
+  <label>Background Music</label>
   <select onchange="changeMusic(this.value)">
     <option value="">None</option>
-    <option value="rain.mp3">Rain</option>
-    <option value="lofi.mp3">Lofi</option>
+    <option value="music1.mp3">Soft Piano</option>
+    <option value="music2.mp3">Rain</option>
+    <option value="music3.mp3">Lofi</option>
+    <option value="music4.mp3">Ocean</option>
+    <option value="music5.mp3">Calm Wind</option>
+    <option value="music6.mp3">Night Vibes</option>
+    <option value="music7.mp3">Meditation</option>
+    <option value="music8.mp3">Nature</option>
+    <option value="music9.mp3">Dreamy</option>
+    <option value="music10.mp3">Focus</option>
+  </select>
+
+  <!-- COLOR -->
+  <label>Background Color</label>
+  <input type="color" onchange="changeColor(this.value)">
+
+  <!-- BACKGROUND IMAGE -->
+  <label>Background Style</label>
+  <select onchange="changeBg(this.value)">
+    <option value="">Default</option>
+    <option value="bg1.jpg">Aesthetic Pink</option>
+    <option value="bg2.jpg">Clouds</option>
+    <option value="bg3.jpg">Stars</option>
+    <option value="bg4.jpg">Sunset</option>
   </select>
 
   <button class="btn" onclick="goHome()">⬅ Back</button>
+
 </div>
 
 <!-- JOURNAL -->
