@@ -1,29 +1,26 @@
 let currentPage = 0;
+
 const pages = document.querySelectorAll("#journalPage .page");
 
-/* COVER */
-function enterApp(){
-  document.getElementById("cover").style.display="none";
-}
-
-/* NAVIGATION */
-
-function showPage(i) {
+function showPage(index) {
   pages.forEach(p => p.classList.remove("active"));
-  if (pages[i]) pages[i].classList.add("active");
+  pages[index].classList.add("active");
 }
 
 function next() {
-  page++;
-  if (page >= pages.length) page = pages.length - 1;
-  showPage(page);
+  if (currentPage < pages.length - 1) {
+    currentPage++;
+    showPage(currentPage);
+  }
 }
 
 function prev() {
-  page--;
-  if (page < 0) page = 0;
-  showPage(page);
+  if (currentPage > 0) {
+    currentPage--;
+    showPage(currentPage);
+  }
 }
+
 /* SCREENS */
 function openJournal(){
   document.getElementById("homePage").classList.add("hidden");
