@@ -572,3 +572,12 @@ textarea, input {
 .s1 { top:20px; left:20px; }
 .s2 { top:80px; right:30px; }
 .s3 { bottom:50px; left:40px; }
+
+.day {
+  border-radius:15px;
+  padding:10px;
+}
+.pink { background:#ffd6e7; }
+.blue { background:#d6f0ff; }
+.purple { background:#e6d6ff; }
+.yellow { background:#fff4c2; }
