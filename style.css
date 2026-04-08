@@ -616,3 +616,65 @@ textarea, input {
   margin-right: auto;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
+
+/* HOME */
+.main-title {
+  text-align: center;
+  font-family: "Playfair Display";
+  margin-bottom: 20px;
+}
+
+/* BUTTON STYLE */
+.main-btn {
+  display: block;
+  margin: 10px auto;
+  padding: 12px 25px;
+  border-radius: 15px;
+  background: white;
+  border: none;
+  font-size: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.main-btn:hover {
+  transform: scale(1.05);
+}
+
+/* SPARKLES */
+.home-sparkle {
+  position: absolute;
+  font-size: 22px;
+  animation: float 3s infinite ease-in-out;
+}
+
+.s1 { top: 20px; left: 20px; }
+.s2 { top: 80px; right: 30px; }
+.s3 { bottom: 40px; left: 50px; }
+
+/* FLOAT ANIMATION */
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* SAVED ENTRIES */
+.saved-title {
+  text-align: center;
+  margin-top: 25px;
+  font-family: "Playfair Display";
+}
+
+.entries-box {
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.entry-card {
+  background: #fff0f6;
+  padding: 12px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
